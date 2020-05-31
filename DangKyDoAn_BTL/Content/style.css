@@ -1,21 +1,24 @@
-﻿*{
+﻿* {
     padding: 0;
     margin: 0;
     font-family: 'Helvetica Neue';
 }
 
-body{
-    background-image: url('../Images/012.png');
+body {
+    background-image: url('../Images/091.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-#box_center{
+#box_center {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-#pnlLogoLogin{
+#pnlLogoLogin {
     text-align: center;
 }
 
@@ -31,12 +34,54 @@ body{
 }
 
 #frmLogin {
+    display: normal;
     width: 590px;
     height: 600px;
-    padding: 40px;
-    background-color: rgba(255,255,255,0.5);
+    padding: 40px 50px;
+    background-color: rgb(255,255,255);
     text-align: center;
+    border-radius: 10px 10px 0 0;
     box-shadow: 2px 2px 6px gray;
+    animation-name: showForm;
+    animation-duration: 0.5s;
+}
+
+@keyframes showForm {
+    0% {
+        display: none;
+        transform: scaleX(0);
+    }
+    10% {
+        display: normal;
+        transform: scaleX(0.1);
+    }
+    20% {
+        transform: scaleX(0.2);
+    }
+    30% {
+        transform: scaleX(0.3);
+    }
+    40% {
+        transform: scaleX(0.4);
+    }
+    50% {
+        transform: scaleX(0.5);
+    }
+    60% {
+        transform: scaleX(0.6);
+    }
+    70% {
+        transform: scaleX(0.7);
+    }
+    80% {
+        transform: scaleX(0.8);
+    }
+    90% {
+        transform: scaleX(0.9);
+    }
+    100% {
+        transform: scaleX(1);
+    }
 }
 
 #user_name, #pwd {
@@ -53,6 +98,11 @@ body{
     margin-top: 38px;
 }
 
+    #user_name:hover, #pwd:hover {
+        border-bottom: 2px solid #AEAEAE;
+        font-weight: 600;
+    }
+
 #btnDangNhap {
     padding: 20px 0;
     width: 60%;
@@ -63,21 +113,28 @@ body{
     color: white;
     background-color: #0F7185;
     margin-top: 50px;
+    box-shadow: 2px 2px 6px gray;
 }
 
     #btnDangNhap:hover {
         background-color: #1CAAC7;
+        font-weight: 600;
     }
 
-    #pnlLinkQuenMK {
-        margin-top: 20px;
-    }
+#pnlLinkQuenMK {
+    margin-top: 20px;
+}
 
 #linkQuenMatKhau {
     color: #646464;
     font-weight: 500;
     font-size: 1em;
 }
+
+    #linkQuenMatKhau:hover {
+        text-decoration: none;
+        font-weight: 600;
+    }
 
 @media only screen and (max-width: 414px) {
     #frmLogin {
