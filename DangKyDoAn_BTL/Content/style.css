@@ -1,0 +1,112 @@
+﻿*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Helvetica Neue';
+}
+
+body{
+    background-image: url('../Images/012.png');
+}
+
+#box_center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#pnlLogoLogin{
+    text-align: center;
+}
+
+#logoIUH {
+    width: 180px;
+    height: auto;
+}
+
+#lbLogin {
+    margin-top: 38px;
+    color: #0A176B;
+    font-size: 1.5em;
+}
+
+#frmLogin {
+    width: 590px;
+    height: 600px;
+    padding: 40px;
+    background-color: rgba(255,255,255,0.5);
+    text-align: center;
+    box-shadow: 2px 2px 6px gray;
+}
+
+#user_name, #pwd {
+    background-color: transparent;
+    border-top: none;
+    border-bottom: 1px solid #AEAEAE;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    outline: none;
+    padding: 15px 5px;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-top: 38px;
+}
+
+#btnDangNhap {
+    padding: 20px 0;
+    width: 60%;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    font-size: 1.1em;
+    color: white;
+    background-color: #0F7185;
+    margin-top: 50px;
+}
+
+    #btnDangNhap:hover {
+        background-color: #1CAAC7;
+    }
+
+    #pnlLinkQuenMK {
+        margin-top: 20px;
+    }
+
+#linkQuenMatKhau {
+    color: #646464;
+    font-weight: 500;
+    font-size: 1em;
+}
+
+@media only screen and (max-width: 414px) {
+    #frmLogin {
+        width: 280px;
+        padding: 40px 20px;
+        height: 480px;
+    }
+
+    #lbLogin {
+        font-size: 1em;
+    }
+
+    #user_name, #pwd {
+        margin-top: 20px;
+        font-size: 0.8em;
+    }
+
+    #btnDangNhap {
+        margin-top: 20px;
+        width: 80%;
+        padding: 10px 0;
+        font-size: 1em;
+    }
+
+    #pnlLinkQuenMK {
+        margin-top: 10px;
+    }
+
+    #linkQuenMatKhau {
+        font-size: 0.8em;
+    }
+}

@@ -1,0 +1,48 @@
+﻿@{ 
+    ViewBag.Title = "Đăng Nhập Hệ Thống";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/style.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+</head>
+<body>
+    
+    <div class="container-fluid">
+        <div id="box_center">
+            <form method="post" id="frmLogin" action="@Url.Action("LogIn","Student")">
+                <div class="form-group" id="pnlLogoLogin">
+                    <img src="~/Images/Logo_IUH.png" id="logoIUH" alt="iuh_logo"/>
+                </div>
+
+                <div class="form-group" id="lbLogin">
+                    <span><b>ĐĂNG NHẬP HỆ THỐNG ĐĂNG KÝ ĐỒ ÁN</b></span>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control" id="user_name" name="user_name" placeholder="Nhập Tên Đăng Nhập" />
+                </div>
+
+                <div class="form-group">
+                    <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Nhập Mật Khẩu" />
+                </div>
+
+                <input type="submit" value="ĐĂNG NHẬP" id="btnDangNhap"/>
+
+                <div class="form-group" id="pnlLinkQuenMK">
+                    <a href="#" id="linkQuenMatKhau">Quên Mật Khẩu ?</a>
+                </div>
+            </form>
+        </div>   
+    </div>
+
+    <script src="~/Scripts/jquery-3.5.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
