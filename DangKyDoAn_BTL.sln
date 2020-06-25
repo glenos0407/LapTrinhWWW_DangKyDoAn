@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30011.22
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DangKyDoAn_BTL", "DangKyDoAn_BTL\DangKyDoAn_BTL.csproj", "{8C245E04-6B17-4DBB-A51D-87DF7A3DB5E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{F8FDADB5-E56A-4429-9C22-917709B05704}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{C4F16800-306D-4F7F-8054-CA51A6236FC1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{8C245E04-6B17-4DBB-A51D-87DF7A3DB5E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C245E04-6B17-4DBB-A51D-87DF7A3DB5E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C245E04-6B17-4DBB-A51D-87DF7A3DB5E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8FDADB5-E56A-4429-9C22-917709B05704}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8FDADB5-E56A-4429-9C22-917709B05704}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8FDADB5-E56A-4429-9C22-917709B05704}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8FDADB5-E56A-4429-9C22-917709B05704}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4F16800-306D-4F7F-8054-CA51A6236FC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4F16800-306D-4F7F-8054-CA51A6236FC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4F16800-306D-4F7F-8054-CA51A6236FC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4F16800-306D-4F7F-8054-CA51A6236FC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,12 @@
+D:\Hoc Tap\LapTrinhWWW_DangKyDoAn-master\LapTrinhWWW_DangKyDoAn-master\DAL\bin\Debug\DAL.dll.config
+D:\Hoc Tap\LapTrinhWWW_DangKyDoAn-master\LapTrinhWWW_DangKyDoAn-master\DAL\bin\Debug\DAL.dll
+D:\Hoc Tap\LapTrinhWWW_DangKyDoAn-master\LapTrinhWWW_DangKyDoAn-master\DAL\bin\Debug\DAL.pdb
+D:\Hoc Tap\LapTrinhWWW_DangKyDoAn-master\LapTrinhWWW_DangKyDoAn-master\DAL\bin\Debug\EntityFramework.dll
+D:\Hoc Tap\LapTrinhWWW_DangKyDoAn-master\LapTrinhWWW_DangKyDoAn-master\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Hoc Tap\LapTrinhWWW_DangKyDoAn-master\LapTrinhWWW_DangKyDoAn-master\DAL\bin\Debug\EntityFramework.xml
+D:\Hoc Tap\LapTrinhWWW_DangKyDoAn-master\LapTrinhWWW_DangKyDoAn-master\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Hoc Tap\LapTrinhWWW_DangKyDoAn-master\LapTrinhWWW_DangKyDoAn-master\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+D:\Hoc Tap\LapTrinhWWW_DangKyDoAn-master\LapTrinhWWW_DangKyDoAn-master\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\Hoc Tap\LapTrinhWWW_DangKyDoAn-master\LapTrinhWWW_DangKyDoAn-master\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\Hoc Tap\LapTrinhWWW_DangKyDoAn-master\LapTrinhWWW_DangKyDoAn-master\DAL\obj\Debug\DAL.dll
+D:\Hoc Tap\LapTrinhWWW_DangKyDoAn-master\LapTrinhWWW_DangKyDoAn-master\DAL\obj\Debug\DAL.pdb
