@@ -1,0 +1,92 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+}
+
+#pnlMenuPage {
+    background-color: #184E9E;
+}
+    #pnlMenuPage > ul > li {
+        width: 300px;
+        text-align: center;
+        padding: 0 2em;
+        border-left: 1px solid lightgray;
+        font-weight: 500;
+    }
+        #pnlMenuPage > ul > li:first-child {
+            padding-left:0 1em;
+            border: none;
+        }
+
+        #pnlMenuPage > ul > li > a {
+            color: lightgray;
+        }
+
+            #pnlMenuPage > ul > li > a:hover{
+                color: white;
+            }
+
+            label {
+                font-weight: 600;
+            }
+
+.col-sm-12:first-child {
+    padding: 0 1em;
+}
+
+.col-sm-12 {
+    padding: 1em;
+}
+
+#pnlLabelPage {
+    text-align: center;
+    padding: 2em 0 1em 0;
+}
+
+#pnlButtonEdit {
+    text-align: right;
+}
+
+#frmThongTinGiangVien {
+    padding: 2em;
+    text-align: center;
+}
+
+    #frmThongTinGiangVien div.col-sm-6:first-child {
+        padding-right: 2em;
+    }
+
+    #frmThongTinGiangVien div.col-sm-6:last-child {
+        padding-left: 2em;
+    }
+
+#btnSua {
+    border-radius: 0;
+}
+
+#btnLuu {
+    width: 10%;
+    border-radius: 0;
+}
+
+#btnDoiMatKhau {
+    outline: none;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 0;
+    color: white;
+}
+
+    #btnDoiMatKhau:hover {
+        /* text-decoration: underline;*/
+    }
+
+#txtIdGiangVien, #txtHoTen, #txtChucVu, #txtKhoa, #txtEmail, #txtSoDienThoai, #txtDiaChi, #txtMatKhauCu, #txtMatKhauMoi, #txtXacNhanMatKhauMoi {
+    border-radius: 0;
+    background: none;
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid lightgray;
+}

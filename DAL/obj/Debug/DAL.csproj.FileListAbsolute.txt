@@ -10,3 +10,18 @@ D:\Hoc Tap\LapTrinhWWW_DangKyDoAn-master\LapTrinhWWW_DangKyDoAn-master\DAL\obj\D
 D:\Hoc Tap\LapTrinhWWW_DangKyDoAn-master\LapTrinhWWW_DangKyDoAn-master\DAL\obj\Debug\DAL.csproj.CopyComplete
 D:\Hoc Tap\LapTrinhWWW_DangKyDoAn-master\LapTrinhWWW_DangKyDoAn-master\DAL\obj\Debug\DAL.dll
 D:\Hoc Tap\LapTrinhWWW_DangKyDoAn-master\LapTrinhWWW_DangKyDoAn-master\DAL\obj\Debug\DAL.pdb
+D:\CUOI KY HK II 2020\LapTrinhWWW_DangKyDoAn\DAL\bin\Debug\DAL.dll.config
+D:\CUOI KY HK II 2020\LapTrinhWWW_DangKyDoAn\DAL\bin\Debug\DAL.dll
+D:\CUOI KY HK II 2020\LapTrinhWWW_DangKyDoAn\DAL\bin\Debug\DAL.pdb
+D:\CUOI KY HK II 2020\LapTrinhWWW_DangKyDoAn\DAL\bin\Debug\Entities.dll
+D:\CUOI KY HK II 2020\LapTrinhWWW_DangKyDoAn\DAL\bin\Debug\EntityFramework.dll
+D:\CUOI KY HK II 2020\LapTrinhWWW_DangKyDoAn\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\CUOI KY HK II 2020\LapTrinhWWW_DangKyDoAn\DAL\bin\Debug\Entities.pdb
+D:\CUOI KY HK II 2020\LapTrinhWWW_DangKyDoAn\DAL\bin\Debug\Entities.dll.config
+D:\CUOI KY HK II 2020\LapTrinhWWW_DangKyDoAn\DAL\bin\Debug\EntityFramework.xml
+D:\CUOI KY HK II 2020\LapTrinhWWW_DangKyDoAn\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\CUOI KY HK II 2020\LapTrinhWWW_DangKyDoAn\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+D:\CUOI KY HK II 2020\LapTrinhWWW_DangKyDoAn\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\CUOI KY HK II 2020\LapTrinhWWW_DangKyDoAn\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\CUOI KY HK II 2020\LapTrinhWWW_DangKyDoAn\DAL\obj\Debug\DAL.dll
+D:\CUOI KY HK II 2020\LapTrinhWWW_DangKyDoAn\DAL\obj\Debug\DAL.pdb

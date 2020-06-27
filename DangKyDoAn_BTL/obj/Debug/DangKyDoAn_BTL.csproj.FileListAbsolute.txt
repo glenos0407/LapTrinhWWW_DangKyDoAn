@@ -100,3 +100,9 @@ D:\CUOI KY HK II 2020\LapTrinhWWW_DangKyDoAn\DangKyDoAn_BTL\obj\Debug\DangKyDoAn
 D:\CUOI KY HK II 2020\LapTrinhWWW_DangKyDoAn\DangKyDoAn_BTL\obj\Debug\DangKyDoAn_BTL.csproj.CopyComplete
 D:\CUOI KY HK II 2020\LapTrinhWWW_DangKyDoAn\DangKyDoAn_BTL\obj\Debug\DangKyDoAn_BTL.dll
 D:\CUOI KY HK II 2020\LapTrinhWWW_DangKyDoAn\DangKyDoAn_BTL\obj\Debug\DangKyDoAn_BTL.pdb
+D:\CUOI KY HK II 2020\LapTrinhWWW_DangKyDoAn\DangKyDoAn_BTL\bin\DAL.dll
+D:\CUOI KY HK II 2020\LapTrinhWWW_DangKyDoAn\DangKyDoAn_BTL\bin\Entities.dll
+D:\CUOI KY HK II 2020\LapTrinhWWW_DangKyDoAn\DangKyDoAn_BTL\bin\DAL.pdb
+D:\CUOI KY HK II 2020\LapTrinhWWW_DangKyDoAn\DangKyDoAn_BTL\bin\DAL.dll.config
+D:\CUOI KY HK II 2020\LapTrinhWWW_DangKyDoAn\DangKyDoAn_BTL\bin\Entities.pdb
+D:\CUOI KY HK II 2020\LapTrinhWWW_DangKyDoAn\DangKyDoAn_BTL\bin\Entities.dll.config

@@ -1,3 +1,103 @@
-﻿@{ 
+﻿@model Entities.GiangVien
+
+@{
     Layout = "~/Views/Shared/_GiangVienLayout.cshtml";
 }
+
+<div class="col-sm-12">
+    <div class="row">
+        <div class="col-sm-12" id="pnlLabelPage">
+            <h3 style="font-weight: 600; color: #0094ff;">Thông Tin Giảng Viên</h3>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-sm-12" id="pnlButtonEdit">
+            <button type="button" class="btn btn-primary" id="btnSua"><i class="fa fa-cog" aria-hidden="true"></i></button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            @using (Html.BeginForm("ThongTinGiangVien", "GiangVien", FormMethod.Post, new { @id = "frmThongTinGiangVien" }))
+            {
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group" style="text-align: left;">
+                            <label for="txtIdGiangVien">Mã Giảng Viên<span class="text-danger">&nbsp;(*)</span></label>
+                            @Html.TextBoxFor(model => model.idGiangVien, new { @class = "form-control", @id = "txtIdGiangVien", @readonly = "readonly", @required="required" })
+                        </div>
+                        <div class="form-group" style="text-align: left;">
+                            <label for="txtHoTen">Họ Tên<span class="text-danger">&nbsp;(*)</span></label>
+                            @Html.TextBoxFor(model => model.hoTen, new { @class = "form-control", @id = "txtHoTen", @readonly = "readonly", @required = "required" })
+                        </div>
+                        <div class="form-group" style="text-align: left;">
+                            <label for="txtChucVu">Chức Vụ<span class="text-danger">&nbsp;(*)</span></label>
+                            @Html.TextBoxFor(model => model.chucVu, new { @class = "form-control", @id = "txtChucVu", @readonly = "readonly", @required = "required" })
+                        </div>
+                        <div class="form-group" style="text-align: left;">
+                            <label for="txtKhoa">Khoa<span class="text-danger">&nbsp;(*)</span></label>
+                            @Html.TextBoxFor(model => model.khoa, new { @class = "form-control", @id = "txtKhoa", @readonly = "readonly", @required = "required" })
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group" style="text-align: left;">
+                            <label for="txtEmail">Email<span class="text-danger">&nbsp;(*)</span></label>
+                            @Html.TextBoxFor(model => model.email, new { @type="email", @class = "form-control", @id = "txtEmail", @readonly = "readonly", @required = "required" })
+                        </div>
+                        <div class="form-group" style="text-align: left;">
+                            <label for="txtSoDienThoai">Số Điện Thoại<span class="text-danger">&nbsp;(*)</span></label>
+                            @Html.TextBoxFor(model => model.soDienThoai, new { @class = "form-control", @id = "txtSoDienThoai", @readonly = "readonly", @required = "required" })
+                        </div>
+                        <div class="form-group" style="text-align: left;">
+                            <label for="txtDiaChi">Địa Chỉ<span class="text-danger">&nbsp;(*)</span></label>
+                            @Html.TextBoxFor(model => model.diaChi, new { @class = "form-control", @id = "txtDiaChi", @readonly = "readonly", @required = "required" })
+                        </div>
+                        <div class="form-group" style="text-align: left;">
+                            <button type="button" id="btnDoiMatKhau" class="btn btn-primary" data-toggle="modal" data-target="#modalDoiMatKhau">Đổi Mật Khẩu</button>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <input type="submit" value="Lưu" id="btnLuu" class="btn btn-primary" disabled/>
+            }
+            <hr />
+        </div>
+    </div>
+</div>
+
+
+<div class="modal" id="modalDoiMatKhau" style="border-radius: 0;">
+    <div class="modal-dialog" style="border-radius: 0;">
+        <div class="modal-content" style="border-radius: 0; padding: 1em;">
+            <div class="modal-body" style="text-align: right;">
+                <form action="/GiangVien/DoiMatKhau" method="post">
+                    <div class="form-group" style="text-align: left;">
+                        <label for="txtMatKhauCu">Mật Khẩu Cũ</label>
+                        <input type="password" id="txtMatKhauCu" class="form-control" required/>
+                    </div>
+                    <div class="form-group" style="text-align: left;">
+                        <label for="txtMatKhauCu">Mật Khẩu Mới</label>
+                        <input type="password" id="txtMatKhauMoi" class="form-control" required/>
+                    </div>
+                    <div class="form-group" style="text-align: left;">
+                        <label for="txtMatKhauCu">Xác Nhận Mật Khẩu Mới</label>
+                        <input type="password" id="txtXacNhanMatKhauMoi" class="form-control" required/>
+                    </div>
+
+                    <br />
+                    <button type="button" class="btn btn-danger" data-dismiss="modal" style="border-radius: 0;">Close</button>
+                    <button type="submit" class="btn btn-primary" id="btnXacNhanDoiMatKhau" style="border-radius: 0;">Xác Nhận</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $("#btnSua").on("click", () => {
+        $("#txtEmail").prop("readonly", false);
+        $("#txtSoDienThoai").prop("readonly", false);
+        $("#txtDiaChi").prop("readonly", false);
+        $("#btnLuu").prop("disabled", false);
+    });
+</script>
