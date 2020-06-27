@@ -6,8 +6,13 @@ using System.Web.Mvc;
 
 namespace DangKyDoAn_BTL.Controllers
 {
-    public class StudentController : Controller
+    public class GiangVienController : Controller
     {
+        public ActionResult Index()
+        {
+            return View();
+        }
+
         public ActionResult LogIn()
         {
             return View();

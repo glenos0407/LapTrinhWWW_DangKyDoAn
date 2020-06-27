@@ -219,7 +219,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="Controllers\GiangVienController.cs" />
+    <Compile Include="Controllers\SinhVienController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -230,9 +231,11 @@
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Student\LogIn.cshtml" />
+    <Content Include="Views\Shared\_LogIn.cshtml" />
     <Content Include="Scripts\jquery-3.5.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.5.1.min.map" />
+    <Content Include="Views\GiangVien\LogIn.cshtml" />
+    <Content Include="Views\SinhVien\LogIn.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
