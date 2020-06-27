@@ -1,0 +1,28 @@
+﻿@using Entities;
+@model IEnumerable<DoAn>
+@{
+    ViewBag.Title = "Quản Lý Đồ Án";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    // khởi tạo webgrid
+    WebGrid grid = new WebGrid(source: Model, rowsPerPage: 10);
+}
+<h2 style="font-weight:bold;text-align:center">Quản Lý Sinh Viên</h2>
+@Html.ActionLink("Thêm Đồ án", "TaoMoiDoAn", null, new { @class = "btn btn-success" })<br />
+@grid.GetHtml(
+            tableStyle: "table table-bordered table-stripped table-hover table-condensed table-responsive",
+            headerStyle: "gridHead",
+            footerStyle: "gridFooter",
+            columns: grid.Columns(
+                        grid.Column("idDoAn", "ID"),
+                        grid.Column("tenDoAn", "Tên"),
+                        grid.Column("noiDung", "Nội dung"),
+                        grid.Column("khoaHoc", "Khóa học"),
+                        grid.Column("khoa", "Khoa/Viện"),
+                        grid.Column("Chỉnh Sửa", format: p => @Html.ActionLink("Sửa", "ChinhSuaDoAn", new { @IdDoAn = p.idDoAn }, new { @class = "btn btn-danger", @style = "vertical-align:baseline;padding: 0px 12px;" })),
+                        grid.Column("Xóa", format: p => @Html.ActionLink("Xóa", "XoaDoAn", new { @IdDoAn = p.idDoAn }, new { @class = "btn btn-default", @style = "vertical-align:baseline;padding: 0px 12px;" }))
+                        ))
+
+
+
+
+

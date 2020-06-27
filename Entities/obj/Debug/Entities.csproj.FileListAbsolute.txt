@@ -27,3 +27,15 @@ D:\Hoc Tap\CuoiKyWWW\LapTrinhWWW_DangKyDoAn\Entities\obj\Debug\Entities.dll
 D:\Hoc Tap\CuoiKyWWW\LapTrinhWWW_DangKyDoAn\Entities\obj\Debug\Entities.pdb
 D:\Hoc Tap\CuoiKyWWW\LapTrinhWWW_DangKyDoAn\Entities\obj\Debug\Entities.Migrations.Initv1.resources
 D:\Hoc Tap\CuoiKyWWW\LapTrinhWWW_DangKyDoAn\Entities\obj\Debug\Entities.csproj.GenerateResource.cache
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\LapTrinhWWW_DangKyDoAn\Entities\bin\Debug\Entities.dll.config
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\LapTrinhWWW_DangKyDoAn\Entities\bin\Debug\Entities.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\LapTrinhWWW_DangKyDoAn\Entities\bin\Debug\Entities.pdb
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\LapTrinhWWW_DangKyDoAn\Entities\bin\Debug\EntityFramework.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\LapTrinhWWW_DangKyDoAn\Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\LapTrinhWWW_DangKyDoAn\Entities\bin\Debug\EntityFramework.xml
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\LapTrinhWWW_DangKyDoAn\Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\LapTrinhWWW_DangKyDoAn\Entities\obj\Debug\Entities.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\LapTrinhWWW_DangKyDoAn\Entities\obj\Debug\Entities.Migrations.Initv1.resources
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\LapTrinhWWW_DangKyDoAn\Entities\obj\Debug\Entities.csproj.GenerateResource.Cache
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\LapTrinhWWW_DangKyDoAn\Entities\obj\Debug\Entities.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\LapTrinhWWW_DangKyDoAn\Entities\obj\Debug\Entities.pdb

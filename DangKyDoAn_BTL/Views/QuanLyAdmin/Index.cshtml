@@ -1,0 +1,30 @@
+﻿@using Entities;
+@model IEnumerable<Admin>
+@{
+    ViewBag.Title = "Quản Lý Admin";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    // khởi tạo webgrid
+    WebGrid grid = new WebGrid(source: Model, rowsPerPage: 10);
+}
+<h2 style="font-weight:bold;text-align:center">Quản Lý Admin</h2>
+@Html.ActionLink("Thêm Admin", "TaoMoiAdmin", null, new { @class = "btn btn-success" })<br />
+@grid.GetHtml(
+            tableStyle: "table table-bordered table-stripped table-hover table-condensed table-responsive",
+            headerStyle: "gridHead",
+            footerStyle: "gridFooter",
+            columns: grid.Columns(
+                        grid.Column("idAdmin", "ID"),
+                        grid.Column("hoTen", "Tên"),
+                        grid.Column("password", "Mật khẩu"),
+                        grid.Column("email", "Email"),
+                        grid.Column("soDienThoai", "Số điện thoại"),
+                        grid.Column("khoa", "Khoa/Viện"),
+                        grid.Column("chucVu", "Chức vụ"),
+                        grid.Column("Chỉnh Sửa", format: p => @Html.ActionLink("Sửa", "ChinhSuaAdmin", new { @IdAdmin = p.idAdmin }, new { @class = "btn btn-danger", @style = "vertical-align:baseline;padding: 0px 12px;" })),
+                        grid.Column("Xóa", format: p => @Html.ActionLink("Xóa", "XoaAdmin", new { @IdAdmin = p.idAdmin }, new { @class = "btn btn-default", @style = "vertical-align:baseline;padding: 0px 12px;" }))
+                        ))
+
+
+
+
+

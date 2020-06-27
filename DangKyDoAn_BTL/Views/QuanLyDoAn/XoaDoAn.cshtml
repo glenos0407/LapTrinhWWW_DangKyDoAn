@@ -1,0 +1,56 @@
+﻿@model Entities.DoAn
+
+@{
+    ViewBag.Title = "XoaDoAn";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Xóa Đồ Án</h2>
+
+<h3>Bạn có chắc chắn muốn xóa?</h3>
+<div>
+    <h4>@Model.hoTenDoAn</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Tên đồ án: ")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tenDoAn)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Nội dung: ")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.noiDung)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Khóa học: ")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.khoaHoc)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Khoa/Viện: ")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.khoa)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-default" /> |
+            @Html.ActionLink("Trở về", "Index")
+        </div>
+    }
+</div>
