@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ namespace Entities
     {
         [Key]
         [Required]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int idGiangVien { get; set; }
 
         [Required]
@@ -27,7 +29,7 @@ namespace Entities
 
         [Required]
         [RegularExpression("^[0-9]{10}$")]
-        public string soDienThoai{ get; set; }
+        public string soDienThoai { get; set; }
 
         [Required]
         public string chucVu { get; set; }
@@ -35,6 +37,6 @@ namespace Entities
         [Required]
         public string khoa { get; set; }
 
-        public virtual IEnumerable<DoAn> DoAns{ get; set; }
+        public virtual IEnumerable<DoAn> DoAns { get; set; }
     }
 }

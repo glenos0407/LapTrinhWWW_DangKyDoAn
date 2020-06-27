@@ -1,9 +1,9 @@
-﻿namespace Entities.Migrations
+﻿namespace DAL.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Initv1 : DbMigration
+    public partial class Init : DbMigration
     {
         public override void Up()
         {

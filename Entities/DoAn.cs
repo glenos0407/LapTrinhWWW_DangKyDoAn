@@ -12,19 +12,20 @@ namespace Entities
     {
         [Key]
         [Required]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int idDoAn { get; set; }
 
         [Required]
         public string tenDoAn { get; set; }
 
         [Required]
-        public  string noiDung { get; set; }
+        public string noiDung { get; set; }
 
         [Required]
-        public  string khoaHoc { get; set; }
+        public string khoaHoc { get; set; }
 
         [Required]
-        public  string khoa { get; set; }
+        public string khoa { get; set; }
 
         public virtual IEnumerable<SinhVien> SinhViens { get; set; }
         public int idGiangVien { get; set; }

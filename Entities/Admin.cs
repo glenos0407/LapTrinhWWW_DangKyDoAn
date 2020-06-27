@@ -12,10 +12,11 @@ namespace Entities
     {
         [Key]
         [Required]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int idAdmin { get; set; }
 
         [Required]
-        public string hoTen { get; set; } 
+        public string hoTen { get; set; }
 
         [Required]
         public string password { get; set; }

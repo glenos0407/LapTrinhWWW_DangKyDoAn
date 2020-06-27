@@ -1,27 +1,17 @@
-D:\Hoc Tap\LapTrinhWWW_DangKyDoAn-master\LapTrinhWWW_DangKyDoAn-master\DAL\bin\Debug\DAL.dll.config
-D:\Hoc Tap\LapTrinhWWW_DangKyDoAn-master\LapTrinhWWW_DangKyDoAn-master\DAL\bin\Debug\DAL.dll
-D:\Hoc Tap\LapTrinhWWW_DangKyDoAn-master\LapTrinhWWW_DangKyDoAn-master\DAL\bin\Debug\DAL.pdb
-D:\Hoc Tap\LapTrinhWWW_DangKyDoAn-master\LapTrinhWWW_DangKyDoAn-master\DAL\bin\Debug\EntityFramework.dll
-D:\Hoc Tap\LapTrinhWWW_DangKyDoAn-master\LapTrinhWWW_DangKyDoAn-master\DAL\bin\Debug\EntityFramework.SqlServer.dll
-D:\Hoc Tap\LapTrinhWWW_DangKyDoAn-master\LapTrinhWWW_DangKyDoAn-master\DAL\bin\Debug\EntityFramework.xml
-D:\Hoc Tap\LapTrinhWWW_DangKyDoAn-master\LapTrinhWWW_DangKyDoAn-master\DAL\bin\Debug\EntityFramework.SqlServer.xml
-D:\Hoc Tap\LapTrinhWWW_DangKyDoAn-master\LapTrinhWWW_DangKyDoAn-master\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
-D:\Hoc Tap\LapTrinhWWW_DangKyDoAn-master\LapTrinhWWW_DangKyDoAn-master\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
-D:\Hoc Tap\LapTrinhWWW_DangKyDoAn-master\LapTrinhWWW_DangKyDoAn-master\DAL\obj\Debug\DAL.csproj.CopyComplete
-D:\Hoc Tap\LapTrinhWWW_DangKyDoAn-master\LapTrinhWWW_DangKyDoAn-master\DAL\obj\Debug\DAL.dll
-D:\Hoc Tap\LapTrinhWWW_DangKyDoAn-master\LapTrinhWWW_DangKyDoAn-master\DAL\obj\Debug\DAL.pdb
-D:\CUOI KY HK II 2020\LapTrinhWWW_DangKyDoAn\DAL\bin\Debug\DAL.dll.config
-D:\CUOI KY HK II 2020\LapTrinhWWW_DangKyDoAn\DAL\bin\Debug\DAL.dll
-D:\CUOI KY HK II 2020\LapTrinhWWW_DangKyDoAn\DAL\bin\Debug\DAL.pdb
-D:\CUOI KY HK II 2020\LapTrinhWWW_DangKyDoAn\DAL\bin\Debug\Entities.dll
-D:\CUOI KY HK II 2020\LapTrinhWWW_DangKyDoAn\DAL\bin\Debug\EntityFramework.dll
-D:\CUOI KY HK II 2020\LapTrinhWWW_DangKyDoAn\DAL\bin\Debug\EntityFramework.SqlServer.dll
-D:\CUOI KY HK II 2020\LapTrinhWWW_DangKyDoAn\DAL\bin\Debug\Entities.pdb
-D:\CUOI KY HK II 2020\LapTrinhWWW_DangKyDoAn\DAL\bin\Debug\Entities.dll.config
-D:\CUOI KY HK II 2020\LapTrinhWWW_DangKyDoAn\DAL\bin\Debug\EntityFramework.xml
-D:\CUOI KY HK II 2020\LapTrinhWWW_DangKyDoAn\DAL\bin\Debug\EntityFramework.SqlServer.xml
-D:\CUOI KY HK II 2020\LapTrinhWWW_DangKyDoAn\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
-D:\CUOI KY HK II 2020\LapTrinhWWW_DangKyDoAn\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
-D:\CUOI KY HK II 2020\LapTrinhWWW_DangKyDoAn\DAL\obj\Debug\DAL.csproj.CopyComplete
-D:\CUOI KY HK II 2020\LapTrinhWWW_DangKyDoAn\DAL\obj\Debug\DAL.dll
-D:\CUOI KY HK II 2020\LapTrinhWWW_DangKyDoAn\DAL\obj\Debug\DAL.pdb
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628\LapTrinhWWW_DangKyDoAn\DAL\bin\Debug\DAL.dll.config
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628\LapTrinhWWW_DangKyDoAn\DAL\bin\Debug\DAL.dll
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628\LapTrinhWWW_DangKyDoAn\DAL\bin\Debug\DAL.pdb
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628\LapTrinhWWW_DangKyDoAn\DAL\bin\Debug\Entities.dll
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628\LapTrinhWWW_DangKyDoAn\DAL\bin\Debug\EntityFramework.dll
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628\LapTrinhWWW_DangKyDoAn\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628\LapTrinhWWW_DangKyDoAn\DAL\bin\Debug\Entities.pdb
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628\LapTrinhWWW_DangKyDoAn\DAL\bin\Debug\Entities.dll.config
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628\LapTrinhWWW_DangKyDoAn\DAL\bin\Debug\EntityFramework.xml
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628\LapTrinhWWW_DangKyDoAn\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628\LapTrinhWWW_DangKyDoAn\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628\LapTrinhWWW_DangKyDoAn\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628\LapTrinhWWW_DangKyDoAn\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628\LapTrinhWWW_DangKyDoAn\DAL\obj\Debug\DAL.dll
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628\LapTrinhWWW_DangKyDoAn\DAL\obj\Debug\DAL.pdb
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628\LapTrinhWWW_DangKyDoAn\DAL\obj\Debug\DAL.Migrations.Init.resources
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628\LapTrinhWWW_DangKyDoAn\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
