@@ -16,7 +16,7 @@ namespace DangKyDoAn_BTL
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Student", action = "LogIn", id = UrlParameter.Optional }
+                defaults: new { controller = "SinhVien", action = "LogIn", id = UrlParameter.Optional }
             );
         }
     }
