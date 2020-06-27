@@ -10,11 +10,15 @@ namespace DangKyDoAn_BTL.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            return RedirectToAction("ThongTinGiangVien","GiangVien");
         }
 
         public ActionResult LogIn()
         {
+            return View();
+        }
+
+        public ActionResult ThongTinGiangVien() {
             return View();
         }
     }
