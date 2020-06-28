@@ -20,3 +20,20 @@ D:\hk2_nam3\LTWWW\BaiTapLon_DKDoAn\New folder\LapTrinhWWW_DangKyDoAn\DAL\obj\Deb
 D:\hk2_nam3\LTWWW\BaiTapLon_DKDoAn\New folder\LapTrinhWWW_DangKyDoAn\DAL\obj\Debug\DAL.csproj.GenerateResource.Cache
 D:\hk2_nam3\LTWWW\BaiTapLon_DKDoAn\New folder\LapTrinhWWW_DangKyDoAn\DAL\obj\Debug\DAL.dll
 D:\hk2_nam3\LTWWW\BaiTapLon_DKDoAn\New folder\LapTrinhWWW_DangKyDoAn\DAL\obj\Debug\DAL.pdb
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\LapTrinhWWW_DangKyDoAn\DAL\bin\Debug\DAL.dll.config
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\LapTrinhWWW_DangKyDoAn\DAL\bin\Debug\DAL.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\LapTrinhWWW_DangKyDoAn\DAL\bin\Debug\DAL.pdb
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\LapTrinhWWW_DangKyDoAn\DAL\bin\Debug\Entities.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\LapTrinhWWW_DangKyDoAn\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\LapTrinhWWW_DangKyDoAn\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\LapTrinhWWW_DangKyDoAn\DAL\bin\Debug\Entities.pdb
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\LapTrinhWWW_DangKyDoAn\DAL\bin\Debug\Entities.dll.config
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\LapTrinhWWW_DangKyDoAn\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\LapTrinhWWW_DangKyDoAn\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\LapTrinhWWW_DangKyDoAn\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\LapTrinhWWW_DangKyDoAn\DAL\obj\Debug\DAL.Migrations.Init.resources
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\LapTrinhWWW_DangKyDoAn\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\LapTrinhWWW_DangKyDoAn\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\LapTrinhWWW_DangKyDoAn\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\LapTrinhWWW_DangKyDoAn\DAL\obj\Debug\DAL.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\LapTrinhWWW_DangKyDoAn\DAL\obj\Debug\DAL.pdb
