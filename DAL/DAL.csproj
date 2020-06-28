@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DangKyDoAn_DBContext.cs" />
+    <Compile Include="DoAnDAL.cs" />
     <Compile Include="GiangVienDAL.cs" />
     <Compile Include="Migrations\202006272117445_Init.cs" />
     <Compile Include="Migrations\202006272117445_Init.designer.cs">
