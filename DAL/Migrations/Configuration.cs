@@ -5,14 +5,14 @@
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Entities.DangKyDoAn_DBContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<DangKyDoAn_DBContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(Entities.DangKyDoAn_DBContext context)
+        protected override void Seed(DangKyDoAn_DBContext context)
         {
             //  This method will be called after migrating to the latest version.
 

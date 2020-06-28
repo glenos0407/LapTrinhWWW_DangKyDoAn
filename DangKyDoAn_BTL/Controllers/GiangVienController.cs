@@ -10,7 +10,7 @@ namespace DangKyDoAn_BTL.Controllers
 {
     public class GiangVienController : Controller
     {
-        dalGiangVien dalGiangVien;
+        GiangVienDAL giangVienDAL;
        
         public ActionResult Index()
         {
@@ -28,8 +28,8 @@ namespace DangKyDoAn_BTL.Controllers
             //    return RedirectToAction("Login","GiangVien");
             //}
             Session["IDGiangVien"] = 1;
-            dalGiangVien = new dalGiangVien();
-            GiangVien gv = dalGiangVien.GetGiangVien(Convert.ToInt32(Session["IDGiangVien"]));
+            giangVienDAL = new GiangVienDAL();
+            GiangVien gv = giangVienDAL.GetGiangVien(Convert.ToInt32(Session["IDGiangVien"]));
 
             return View(gv);
         }
@@ -42,8 +42,8 @@ namespace DangKyDoAn_BTL.Controllers
             //    return RedirectToAction("Login","GiangVien");
             //}
 
-            dalGiangVien = new dalGiangVien();
-            GiangVien gv = dalGiangVien.GetGiangVien(Convert.ToInt32(Session["IDGiangVien"]));
+            giangVienDAL = new GiangVienDAL();
+            GiangVien gv = giangVienDAL.GetGiangVien(Convert.ToInt32(Session["IDGiangVien"]));
 
             return View(gv);
         }
