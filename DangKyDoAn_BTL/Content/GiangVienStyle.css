@@ -6,29 +6,10 @@
 #pnlMenuPage {
     background-color: #184E9E;
 }
-    #pnlMenuPage > ul > li {
-        width: 300px;
-        text-align: center;
-        padding: 0 2em;
-        border-left: 1px solid lightgray;
-        font-weight: 500;
-    }
-        #pnlMenuPage > ul > li:first-child {
-            padding-left:0 1em;
-            border: none;
-        }
 
-        #pnlMenuPage > ul > li > a {
-            color: lightgray;
-        }
-
-            #pnlMenuPage > ul > li > a:hover{
-                color: white;
-            }
-
-            label {
-                font-weight: 600;
-            }
+label {
+    font-weight: 600;
+}
 
 .col-sm-12:first-child {
     padding: 0 1em;
@@ -65,7 +46,6 @@
 }
 
 #btnLuu {
-    width: 10%;
     border-radius: 0;
 }
 

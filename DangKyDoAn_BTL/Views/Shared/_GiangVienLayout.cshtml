@@ -10,27 +10,64 @@
     <script src="~/Scripts/modernizr-2.8.3.js"></script>
     <script src="~/Scripts/jquery-3.5.1.js"></script>
     <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/fontawesome.js"></script>
     <style>
         * {
             padding: 0;
             margin: 0;
         }
+
+        #pnlMenuPage > #navbarToggler > ul > li {
+            width: 250px;
+            text-align: center;
+            padding: 0 1em;
+            font-weight: 500;
+            border: none;
+        }
+
+        #pnlMenuPage > #navbarToggler > ul > li:first-child {
+            padding-left: 0 0.5em;
+            border: none;
+        }
+
+        #pnlMenuPage > #navbarToggler >  ul > li > a {
+            color: lightgray;
+        }
+
+            #pnlMenuPage > #navbarToggler > ul > li > a:hover {
+                color: white;
+            }
+
+        #btnLuu{
+            width: 100px;
+        }
+
+        @@media only screen and (max-width: 576px) {
+            #pnlMenuPage > #navbarToggler > ul > li > a {
+                display: flex;
+                justify-content: flex-start;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="container"  style="padding: 0;">
+    <div class="container" style="padding: 0;">
         <div class="row">
             <div class="col-sm-12">
                 <nav class="navbar navbar-expand-sm" id="pnlMenuPage">
-                    <!-- Links -->
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/GiangVien/ThongTinGiangVien">Thông Tin Giảng Viên</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/GiangVien/DoAn">Đồ Án</a>
-                        </li>
-                    </ul>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon" style="color: white; justify-content: center; align-items: center; display: flex;"><i class="fa fa-bars" aria-hidden="true"></i></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarToggler">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/GiangVien/ThongTinGiangVien">Thông Tin Giảng Viên</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/GiangVien/DoAn">Đồ Án</a>
+                            </li>
+                        </ul>
+                    </div>
                 </nav>
             </div>
         </div>
