@@ -165,3 +165,6 @@ C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628\LapTrinhWWW_DangKyD
 C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628\LapTrinhWWW_DangKyDoAn\DangKyDoAn_BTL\bin\System.Web.Mvc.xml
 C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628\LapTrinhWWW_DangKyDoAn\DangKyDoAn_BTL\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628\LapTrinhWWW_DangKyDoAn\DangKyDoAn_BTL\obj\Debug\DangKyDoAn_BTL.csproj.CopyComplete
+D:\hk2_nam3\LTWWW\BaiTapLon_DKDoAn\New folder\LapTrinhWWW_DangKyDoAn\DangKyDoAn_BTL\obj\Debug\DangKyDoAn_BTL.csprojResolveAssemblyReference.cache
+D:\hk2_nam3\LTWWW\BaiTapLon_DKDoAn\New folder\LapTrinhWWW_DangKyDoAn\DangKyDoAn_BTL\obj\Debug\DangKyDoAn_BTL.dll
+D:\hk2_nam3\LTWWW\BaiTapLon_DKDoAn\New folder\LapTrinhWWW_DangKyDoAn\DangKyDoAn_BTL\obj\Debug\DangKyDoAn_BTL.pdb

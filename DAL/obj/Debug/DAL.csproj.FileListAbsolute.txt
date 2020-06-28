@@ -15,3 +15,8 @@ C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628\LapTrinhWWW_DangKyD
 C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628\LapTrinhWWW_DangKyDoAn\DAL\obj\Debug\DAL.pdb
 C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628\LapTrinhWWW_DangKyDoAn\DAL\obj\Debug\DAL.Migrations.Init.resources
 C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628\LapTrinhWWW_DangKyDoAn\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+D:\hk2_nam3\LTWWW\BaiTapLon_DKDoAn\New folder\LapTrinhWWW_DangKyDoAn\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\hk2_nam3\LTWWW\BaiTapLon_DKDoAn\New folder\LapTrinhWWW_DangKyDoAn\DAL\obj\Debug\DAL.Migrations.Init.resources
+D:\hk2_nam3\LTWWW\BaiTapLon_DKDoAn\New folder\LapTrinhWWW_DangKyDoAn\DAL\obj\Debug\DAL.csproj.GenerateResource.Cache
+D:\hk2_nam3\LTWWW\BaiTapLon_DKDoAn\New folder\LapTrinhWWW_DangKyDoAn\DAL\obj\Debug\DAL.dll
+D:\hk2_nam3\LTWWW\BaiTapLon_DKDoAn\New folder\LapTrinhWWW_DangKyDoAn\DAL\obj\Debug\DAL.pdb

@@ -39,7 +39,7 @@ namespace DAL
                 d.khoaHoc = item.khoaHoc;
                 d.khoa = item.khoa;
                 d.idGiangVien = item.idGiangVien;
-                d.idKhoa = item.idKhoa;
+           
                 ld.Add(d);
             }
             return ld;
@@ -54,7 +54,6 @@ namespace DAL
             doan.khoaHoc = doan.khoaHoc;
             doan.khoa = doan.khoa;
             doan.idGiangVien = doan.idGiangVien;
-            doan.idKhoa = doan.idKhoa;
             return doan;
 
         }
@@ -68,7 +67,6 @@ namespace DAL
             doan.khoaHoc = doan.khoaHoc;
             doan.khoa = doan.khoa;
             doan.idGiangVien = doan.idGiangVien;
-            doan.idKhoa = doan.idKhoa;
             return doan;
 
         }
@@ -93,7 +91,7 @@ namespace DAL
             d.First().khoaHoc =doanupdate.khoaHoc;
             d.First().khoa =doanupdate.khoa;
             d.First().idGiangVien =doanupdate.idGiangVien;
-            d.First().idKhoa =doanupdate.idKhoa;
+
             db.SaveChanges();
             return 1;
         }
@@ -106,7 +104,7 @@ namespace DAL
             dtemp.khoaHoc = doannew.khoaHoc;
             dtemp.khoa = doannew.khoa;
             dtemp.idGiangVien = dtemp.idGiangVien;
-            dtemp.idKhoa = dtemp.idKhoa;
+            
             db.DoAns.Add(dtemp);
             db.SaveChanges();
             return 1;
