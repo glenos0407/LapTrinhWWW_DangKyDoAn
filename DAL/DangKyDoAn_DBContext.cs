@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Entities;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entities
+namespace DAL
 {
     public class DangKyDoAn_DBContext : DbContext
     {

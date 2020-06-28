@@ -12,6 +12,7 @@ namespace Entities
     {
         [Key]
         [Required]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int idSinhVien { get; set; }
 
         [Required]
@@ -27,7 +28,7 @@ namespace Entities
         public string diaChi { get; set; }
 
         [Required]
-        [RegularExpression ("^[0-9]{10}$")]
+        [RegularExpression("^[0-9]{10}$")]
         public string soDienThoai { get; set; }
 
         [Required]

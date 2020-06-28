@@ -5,12 +5,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C4F16800-306D-4F7F-8054-CA51A6236FC1}</ProjectGuid>
+    <ProjectGuid>{EAB8F1F6-2BF9-43B5-A281-6FE9E1AEEE59}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Entities</RootNamespace>
     <AssemblyName>Entities</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
@@ -52,25 +52,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin.cs" />
-    <Compile Include="DangKyDoAn_DBContext.cs" />
     <Compile Include="DoAn.cs" />
     <Compile Include="GiangVien.cs" />
-    <Compile Include="Migrations\202006251438265_Initv1.cs" />
-    <Compile Include="Migrations\202006251438265_Initv1.designer.cs">
-      <DependentUpon>202006251438265_Initv1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SinhVien.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202006251438265_Initv1.resx">
-      <DependentUpon>202006251438265_Initv1.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -1,17 +1,17 @@
-﻿using System;
+﻿using Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Entities;
 
 namespace DAL
 {
-    public class dalGiangVien
+    public class GiangVienDAL
     {
-        DangKyDoAn_DBContext db;
+        private DangKyDoAn_DBContext db;
 
-        public dalGiangVien()
+        public GiangVienDAL()
         {
             db = new DangKyDoAn_DBContext();
         }
