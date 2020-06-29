@@ -1,0 +1,13 @@
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628_1\LapTrinhWWW_DangKyDoAn\Server-API\EntityFramework\bin\Debug\EntityFramework.dll.config
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628_1\LapTrinhWWW_DangKyDoAn\Server-API\EntityFramework\bin\Debug\EntityFramework.dll
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628_1\LapTrinhWWW_DangKyDoAn\Server-API\EntityFramework\bin\Debug\EntityFramework.pdb
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628_1\LapTrinhWWW_DangKyDoAn\Server-API\EntityFramework\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628_1\LapTrinhWWW_DangKyDoAn\Server-API\EntityFramework\bin\Debug\EntityFramework.xml
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628_1\LapTrinhWWW_DangKyDoAn\Server-API\EntityFramework\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628_1\LapTrinhWWW_DangKyDoAn\Server-API\EntityFramework\obj\Debug\EntityFramework.csprojAssemblyReference.cache
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628_1\LapTrinhWWW_DangKyDoAn\Server-API\EntityFramework\obj\Debug\EntityFramework.csproj.CoreCompileInputs.cache
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628_1\LapTrinhWWW_DangKyDoAn\Server-API\EntityFramework\obj\Debug\EntityFramework.csproj.CopyComplete
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628_1\LapTrinhWWW_DangKyDoAn\Server-API\EntityFramework\obj\Debug\EntityFramework.dll
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628_1\LapTrinhWWW_DangKyDoAn\Server-API\EntityFramework\obj\Debug\EntityFramework.pdb
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628_1\LapTrinhWWW_DangKyDoAn\Server-API\EntityFramework\obj\Debug\EntityFramework.Migrations.Init.resources
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628_1\LapTrinhWWW_DangKyDoAn\Server-API\EntityFramework\obj\Debug\EntityFramework.csproj.GenerateResource.cache

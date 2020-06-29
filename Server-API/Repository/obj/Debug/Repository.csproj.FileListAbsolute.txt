@@ -1,0 +1,15 @@
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628_1\LapTrinhWWW_DangKyDoAn\Server-API\Repository\obj\Debug\Repository.csprojAssemblyReference.cache
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628_1\LapTrinhWWW_DangKyDoAn\Server-API\Repository\obj\Debug\Repository.csproj.CoreCompileInputs.cache
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628_1\LapTrinhWWW_DangKyDoAn\Server-API\Repository\bin\Debug\Repository.dll.config
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628_1\LapTrinhWWW_DangKyDoAn\Server-API\Repository\bin\Debug\Repository.dll
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628_1\LapTrinhWWW_DangKyDoAn\Server-API\Repository\bin\Debug\Repository.pdb
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628_1\LapTrinhWWW_DangKyDoAn\Server-API\Repository\bin\Debug\EntityFramework.dll
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628_1\LapTrinhWWW_DangKyDoAn\Server-API\Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628_1\LapTrinhWWW_DangKyDoAn\Server-API\Repository\bin\Debug\Model.dll
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628_1\LapTrinhWWW_DangKyDoAn\Server-API\Repository\bin\Debug\Model.pdb
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628_1\LapTrinhWWW_DangKyDoAn\Server-API\Repository\bin\Debug\Model.dll.config
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628_1\LapTrinhWWW_DangKyDoAn\Server-API\Repository\bin\Debug\EntityFramework.xml
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628_1\LapTrinhWWW_DangKyDoAn\Server-API\Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628_1\LapTrinhWWW_DangKyDoAn\Server-API\Repository\obj\Debug\Repository.csproj.CopyComplete
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628_1\LapTrinhWWW_DangKyDoAn\Server-API\Repository\obj\Debug\Repository.dll
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200628_1\LapTrinhWWW_DangKyDoAn\Server-API\Repository\obj\Debug\Repository.pdb

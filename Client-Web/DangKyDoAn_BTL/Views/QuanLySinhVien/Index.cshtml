@@ -1,0 +1,31 @@
+﻿@using Entities;
+@model IEnumerable<SinhVien>
+@{
+    ViewBag.Title = "Quản Lý Sinh Viên";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    // khởi tạo webgrid
+    WebGrid grid = new WebGrid(source: Model, rowsPerPage: 10);
+}
+<h2 style="font-weight:bold;text-align:center">Quản Lý Sinh Viên</h2>
+@Html.ActionLink("Thêm Sinh Viên", "TaoMoiSinhVien", null, new { @class = "btn btn-success" })<br />
+@grid.GetHtml(
+            tableStyle: "table table-bordered table-stripped table-hover table-condensed table-responsive",
+            headerStyle: "gridHead",
+            footerStyle: "gridFooter",
+            columns: grid.Columns(
+                        grid.Column("idSinhVien", "ID"),
+                        grid.Column("hoTenSinhVien", "Tên"),
+                        grid.Column("password", "Mật khẩu"),
+                        grid.Column("email", "Email"),
+                        grid.Column("diaChi", "Địa chỉ"),
+                        grid.Column("soDienThoai", "Số điện thoại"),
+                        grid.Column("nienKhoa", "Khóa"),
+                        grid.Column("khoa", "Khoa/Viện"),
+                        grid.Column("Chỉnh Sửa", format: p => @Html.ActionLink("Sửa", "ChinhSuaSinhVien", new { @IdSinhVien = p.idSinhVien }, new { @class = "btn btn-danger", @style = "vertical-align:baseline;padding: 0px 12px;" })),
+                        grid.Column("Xóa", format: p => @Html.ActionLink("Xóa", "XoaSinhVien", new { @IdSinhVien = p.idSinhVien }, new { @class = "btn btn-default", @style = "vertical-align:baseline;padding: 0px 12px;" }))
+                        ))
+
+
+
+
+
