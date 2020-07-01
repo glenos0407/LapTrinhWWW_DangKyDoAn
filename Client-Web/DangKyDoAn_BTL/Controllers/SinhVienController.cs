@@ -19,9 +19,14 @@ namespace DangKyDoAn_BTL.Controllers
             return View();
         }
 
-        public ActionResult ThongTinSinhVien()
+        public ActionResult ThongTinSinhVien(SinhVien sinhVien)
         {
-            return View();
+            return View(sinhVien);
+        }
+
+        public ActionResult Test(SinhVien sinhVien)
+        {
+            return View(sinhVien);
         }
     }
 }

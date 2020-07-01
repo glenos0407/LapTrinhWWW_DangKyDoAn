@@ -24,14 +24,11 @@ namespace Model.Entities
         [Required]
         public string nienKhoa { get; set; }
 
-        [Required]
         public string diaChi { get; set; }
 
-        [Required]
         [RegularExpression("^[0-9]{10}$")]
         public string soDienThoai { get; set; }
 
-        [Required]
         public string email { get; set; }
 
         [Required]

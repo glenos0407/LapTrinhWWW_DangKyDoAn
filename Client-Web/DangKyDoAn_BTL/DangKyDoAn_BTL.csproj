@@ -314,6 +314,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\GiangVienController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\SinhVienController.cs" />
     <Compile Include="Controllers\QuanLyAdminController.cs" />
     <Compile Include="Controllers\QuanLyDoAnController.cs" />
@@ -330,10 +331,8 @@
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Shared\_LogIn.cshtml" />
     <Content Include="Scripts\jquery-3.5.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.5.1.min.map" />
-    <Content Include="Views\GiangVien\LogIn.cshtml" />
     <Content Include="Views\SinhVien\LogIn.cshtml" />
     <Content Include="Views\GiangVien\Index.cshtml" />
     <Content Include="Views\Shared\_GiangVienLayout.cshtml" />
@@ -357,6 +356,10 @@
     <Content Include="Views\QuanLySinhVien\Index.cshtml" />
     <Content Include="Views\QuanLySinhVien\TaoMoiSinhVien.cshtml" />
     <Content Include="Views\QuanLySinhVien\XoaSinhVien.cshtml" />
+    <Content Include="Views\Login\LoginSinhVien.cshtml" />
+    <Content Include="Views\Login\LoginGiangVien.cshtml" />
+    <Content Include="Views\Login\LoginAdmin.cshtml" />
+    <Content Include="Views\SinhVien\Test.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -373,12 +376,8 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DAL\DAL.csproj">
-      <Project>{70d5bc27-ddbe-4d7e-b00d-58cf0da16cdd}</Project>
-      <Name>DAL</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Entities\Entities.csproj">
-      <Project>{EAB8F1F6-2BF9-43B5-A281-6FE9E1AEEE59}</Project>
+      <Project>{4374f659-94c8-43d3-8503-779d8882b492}</Project>
       <Name>Entities</Name>
     </ProjectReference>
   </ItemGroup>

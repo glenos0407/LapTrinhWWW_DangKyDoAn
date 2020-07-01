@@ -20,7 +20,7 @@ namespace DangKyDoAn_BTL.Controllers
             {
                 sv = new SinhVien();
                 sv.idSinhVien = i;
-                sv.hoTenSinhVien = "Nguyễn Sinh Viên 0" + i;
+                sv.hoTen = "Nguyễn Sinh Viên 0" + i;
                 sv.password = i.ToString();
                 sv.nienKhoa = i.ToString();
                 sv.diaChi = "Đường " + i;
@@ -64,7 +64,7 @@ namespace DangKyDoAn_BTL.Controllers
             SinhVien sv = new SinhVien();
             int i = 999;
             sv.idSinhVien = i;
-            sv.hoTenSinhVien = "Nguyễn Sinh Viên 0" + i;
+            sv.hoTen = "Nguyễn Sinh Viên 0" + i;
             sv.password = i.ToString();
             sv.nienKhoa = i.ToString();
             sv.diaChi = "Đường " + i;
@@ -100,7 +100,7 @@ namespace DangKyDoAn_BTL.Controllers
             SinhVien sv = new SinhVien();
             int i = 999;
             sv.idSinhVien = i;
-            sv.hoTenSinhVien = "Nguyễn Sinh Viên 0" + i;
+            sv.hoTen = "Nguyễn Sinh Viên 0" + i;
             sv.password = i.ToString();
             sv.nienKhoa = i.ToString();
             sv.diaChi = "Đường " + i;

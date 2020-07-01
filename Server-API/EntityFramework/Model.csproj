@@ -53,6 +53,7 @@
     <Compile Include="DataContext\DangKyDoAn_DBContext.cs" />
     <Compile Include="Entities\Admin.cs" />
     <Compile Include="Entities\DoAn.cs" />
+    <Compile Include="Entities\DTO\LoginDto.cs" />
     <Compile Include="Entities\GiangVien.cs" />
     <Compile Include="Entities\SinhVien.cs" />
     <Compile Include="Migrations\202006281947460_Init.cs" />
@@ -62,6 +63,10 @@
     <Compile Include="Migrations\202006291822058_UpdateSinhVien.cs" />
     <Compile Include="Migrations\202006291822058_UpdateSinhVien.Designer.cs">
       <DependentUpon>202006291822058_UpdateSinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006300924105_UpdateDataBinding.cs" />
+    <Compile Include="Migrations\202006300924105_UpdateDataBinding.Designer.cs">
+      <DependentUpon>202006300924105_UpdateDataBinding.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -76,6 +81,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202006291822058_UpdateSinhVien.resx">
       <DependentUpon>202006291822058_UpdateSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006300924105_UpdateDataBinding.resx">
+      <DependentUpon>202006300924105_UpdateDataBinding.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

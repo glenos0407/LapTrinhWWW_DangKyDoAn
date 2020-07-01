@@ -9,5 +9,6 @@ namespace Service.Interface
 {
     public interface ISinhVienService : IBaseService<SinhVien>
     {
+        SinhVien Login(int idSinhVien, string password);
     }
 }

@@ -46,6 +46,11 @@ namespace Service
             return giangVienRepository.GetByCondition(x => x.idGiangVien.Equals(id)).hoTen;
         }
 
+        public GiangVien Login(int idGiangVien, string password)
+        {
+            return giangVienRepository.GetByCondition(x => x.idGiangVien.Equals(idGiangVien) && x.password.Equals(password));
+        }
+
         public GiangVien Update(GiangVien entity)
         {
             var existing = GetById(entity.idGiangVien);

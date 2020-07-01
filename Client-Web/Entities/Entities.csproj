@@ -5,7 +5,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EAB8F1F6-2BF9-43B5-A281-6FE9E1AEEE59}</ProjectGuid>
+    <ProjectGuid>{4374F659-94C8-43D3-8503-779D8882B492}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Entities</RootNamespace>
@@ -54,8 +54,8 @@
     <Compile Include="Admin.cs" />
     <Compile Include="DoAn.cs" />
     <Compile Include="GiangVien.cs" />
-    <Compile Include="SinhVien.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SinhVien.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

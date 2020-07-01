@@ -9,6 +9,6 @@ namespace Service.Interface
 {
     public interface IGiangVienService : IBaseService<GiangVien>
     {
-
+        GiangVien Login(int idGiangVien, string password);
     }
 }

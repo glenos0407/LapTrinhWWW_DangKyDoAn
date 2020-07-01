@@ -43,6 +43,12 @@ namespace Server_API.Controllers
         {
             return Json(sinhVienService.GetName(id));
         }
+        [Route("api/SinhVien/Login")]
+        public IHttpActionResult Login(LoginDto dto)
+        {
+            return Json(sinhVienService.Login(dto.id, dto.password));
+        }
+
 
     }
 }

@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/style.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div id="box_center">
+             <form method="post" id="frmLogin" action="@ViewBag.ActionDangNhap"> 
+            @*@using (Html.BeginForm("Test", "SinhVien", FormMethod.Get, new { id = "frmLogin" }))
+            {*@
+                @Html.AntiForgeryToken()
+                <div class="form-group" id="pnlLogoLogin">
+                    <img src="~/Images/Logo_IUH.png" id="logoIUH" alt="iuh_logo" />
+                </div>
+
+                <div class="form-group" id="pnlUser">
+                    <input type="text" class="form-control" id="user_name" name="user_name" placeholder="Tên Đăng Nhập" />
+                </div>
+
+                <div class="form-group" id="pnlPass">
+                    <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Mật Khẩu" />
+                </div>
+
+                <input onclick="Login()" type="button" id="btnDangNhap" />
+
+                <div class="form-group" id="pnlLinkQuenMK">
+                    <a href="#" id="linkQuenMatKhau">Quên Mật Khẩu ?</a>
+                </div>
+            @* } *@
+            </form>
+        </div>
+    </div>
+    <script src="~/Scripts/jquery-3.5.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script>
+        var sinhVien = {};
+        function Login() {
+            var data = {
+                'id': $("#user_name").val(),
+                'password': $("#pwd").val()
+            }
+            $.ajax({
+                type: "POST",
+                dataType: "json",
+                url: "https://localhost:44330/api/SinhVien/Login",
+                data: data,
+                success: function (data) {
+                    sinhVien = data;
+                    alert(data);
+                    console.log(data);
+                    afterLogin();
+                },
+                error: function (error) {
+                    jsonValue = jQuery.parseJSON(error.responseText);
+                    alert("error" + error.responseText);
+                }
+            });
+        };
+        function afterLogin() {
+            $.ajax({
+                type: "POST",
+                data: JSON.stringify(sinhVien),
+                url: "@Url.Action("Test","SinhVien")",
+                contentType: 'application/json',
+                success: function (result) {
+                    alert("Success");
+                    $.post("/SinhVien/Test",)
+                }
+            })
+        }
+    </script>
+</body>
+</html>
+

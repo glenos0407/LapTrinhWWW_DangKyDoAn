@@ -21,13 +21,10 @@ namespace Model.Entities
         [Required]
         public string password { get; set; }
 
-        [Required]
         public string email { get; set; }
 
-        [Required]
         public string diaChi { get; set; }
 
-        [Required]
         [RegularExpression("^[0-9]{10}$")]
         public string soDienThoai { get; set; }
 

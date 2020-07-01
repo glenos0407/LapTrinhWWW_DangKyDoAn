@@ -51,6 +51,11 @@ namespace Service
             return adminRepository.GetByCondition(x => x.idAdmin.Equals(id)).hoTen;
         }
 
+        public Admin Login(int idAdmin, string password)
+        {
+            return adminRepository.GetByCondition(x => x.idAdmin.Equals(idAdmin) && x.password.Equals(password));
+        }
+
         public Admin Update(Admin entity)
         {
             var existing = GetById(entity.idAdmin);

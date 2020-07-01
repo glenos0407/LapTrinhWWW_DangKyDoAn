@@ -10,5 +10,6 @@ namespace Service.Interface
     public interface IAdminService : IBaseService<Admin>
     {
         int GetID (string hoTen);
+        Admin Login(int idAdmin, string password);
     }
 }
