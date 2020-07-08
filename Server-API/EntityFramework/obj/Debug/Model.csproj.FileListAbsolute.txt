@@ -28,3 +28,4 @@ C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200630_01\LapTrinhWWW_Dang
 C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200630_01\LapTrinhWWW_DangKyDoAn\Server-API\EntityFramework\obj\Debug\Model.pdb
 C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200630_01\LapTrinhWWW_DangKyDoAn\Server-API\EntityFramework\obj\Debug\Model.Migrations.UpdateDataBinding.resources
 C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200630_01\LapTrinhWWW_DangKyDoAn\Server-API\EntityFramework\obj\Debug\Model.csprojAssemblyReference.cache
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200630_01\LapTrinhWWW_DangKyDoAn\Server-API\EntityFramework\obj\Debug\Model.Migrations.addAvatar.resources

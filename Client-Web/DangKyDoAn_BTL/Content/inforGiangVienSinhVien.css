@@ -1,0 +1,74 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+/*body {
+    font-family: sans-serif;
+    padding: 50px;
+    width: 100vw;
+}*/
+
+#btnSua {
+    background-color: #0076ba;
+    border-radius: 5px;
+    border: 1px solid #008CBA;
+    display: inline-block;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 15px;
+    padding: 12px 25px;
+    text-decoration: none;
+    width: 200px;
+}
+
+#btnDoiMatKhau {
+    background-color: #0076ba;
+    border-radius: 5px;
+    border: 1px solid #008CBA;
+    display: inline-block;
+    color: #ffffff;
+    font-family: Helvetica, Arial, Tahoma, sans-serif;
+    font-size: 15px;
+    padding: 12px 30px;
+    text-decoration: none;
+    width: 200px;
+}
+
+#btnDangXuat {
+    background-color: #0076ba;
+    border-radius: 5px;
+    border: 1px solid #008CBA;
+    display: inline-block;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 15px;
+    padding: 12px 30px;
+    text-decoration: none;
+    width: 200px;
+}
+
+#img {
+    padding: 12px 0 10px 0;
+    width: 190px;
+    height: 200px;
+    display: block;
+}
+
+#button {
+    padding: 18px 0 10px 0;
+    font-size: 15px;
+}
+
+#btnThemDoAn {
+    background-color: #0076ba;
+    border-radius: 5px;
+    border: 1px solid #008CBA;
+    display: inline-block;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 15px;
+    padding: 12px 30px;
+    text-decoration: none;
+    width: 150px;
+}

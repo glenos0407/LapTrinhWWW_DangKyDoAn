@@ -62,7 +62,29 @@ namespace Service
                 existing.khoa = entity.hoTen;
                 existing.nienKhoa = entity.nienKhoa;
                 existing.soDienThoai = entity.soDienThoai;
-                return sinhVienRepository.Update(entity);
+                existing.idDoAn = entity.idDoAn;
+                return sinhVienRepository.Update(existing);
+            }
+            return null;
+        }
+        
+        public SinhVien HuyDoAn(int id)
+        {
+            var existing = GetById(id);
+            if(existing != null)
+            {
+                existing.idDoAn = null;
+                return sinhVienRepository.Update(existing);
+            }
+            return null;
+        }
+        public SinhVien DangKyDoAn(int idSinhVien, int idDoAn)
+        {
+            var existing = GetById(idSinhVien);
+            if(existing != null)
+            {
+                existing.idDoAn = idDoAn;
+                return sinhVienRepository.Update(existing);
             }
             return null;
         }

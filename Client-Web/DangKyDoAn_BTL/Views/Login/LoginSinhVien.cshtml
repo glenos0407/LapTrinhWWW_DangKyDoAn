@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@model Entities.Dto.LoginDto
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -11,28 +13,24 @@
 <body>
     <div class="container-fluid">
         <div id="box_center">
-             <form method="post" id="frmLogin" action="@ViewBag.ActionDangNhap"> 
-            @*@using (Html.BeginForm("Test", "SinhVien", FormMethod.Get, new { id = "frmLogin" }))
-            {*@
+            <form method="post" id="frmLogin" action="@ViewBag.ActionDangNhap">
                 @Html.AntiForgeryToken()
                 <div class="form-group" id="pnlLogoLogin">
                     <img src="~/Images/Logo_IUH.png" id="logoIUH" alt="iuh_logo" />
                 </div>
 
                 <div class="form-group" id="pnlUser">
-                    <input type="text" class="form-control" id="user_name" name="user_name" placeholder="Tên Đăng Nhập" />
+                    @Html.EditorFor(model => model.id, new { htmlAttributes = new { id = "user_name", @class = "form-control", @placeholder = "Tên Đăng Nhập", type = "text" } })
                 </div>
 
                 <div class="form-group" id="pnlPass">
-                    <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Mật Khẩu" />
+                    @Html.EditorFor(model => model.password, new { htmlAttributes = new { id = "pwd", @class = "form-control", @placeholder = "Mật Khẩu", type="password" } })
                 </div>
-
-                <input onclick="Login()" type="button" id="btnDangNhap" />
-
+                <input type="submit" value="Đăng Nhập" id="btnDangNhap" />
                 <div class="form-group" id="pnlLinkQuenMK">
                     <a href="#" id="linkQuenMatKhau">Quên Mật Khẩu ?</a>
                 </div>
-            @* } *@
+                @* } *@
             </form>
         </div>
     </div>
@@ -51,10 +49,11 @@
                 url: "https://localhost:44330/api/SinhVien/Login",
                 data: data,
                 success: function (data) {
+                    debugger
                     sinhVien = data;
                     alert(data);
                     console.log(data);
-                    afterLogin();
+                    //afterLogin();
                 },
                 error: function (error) {
                     jsonValue = jQuery.parseJSON(error.responseText);
@@ -62,18 +61,7 @@
                 }
             });
         };
-        function afterLogin() {
-            $.ajax({
-                type: "POST",
-                data: JSON.stringify(sinhVien),
-                url: "@Url.Action("Test","SinhVien")",
-                contentType: 'application/json',
-                success: function (result) {
-                    alert("Success");
-                    $.post("/SinhVien/Test",)
-                }
-            })
-        }
+
     </script>
 </body>
 </html>

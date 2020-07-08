@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@model Entities.Dto.LoginDto
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -12,20 +14,18 @@
     <div class="container-fluid">
         <div id="box_center">
             <form method="post" id="frmLogin" action="@ViewBag.ActionDangNhap">
+                @Html.AntiForgeryToken()
                 <div class="form-group" id="pnlLogoLogin">
                     <img src="~/Images/Logo_IUH.png" id="logoIUH" alt="iuh_logo" />
                 </div>
-
                 <div class="form-group" id="pnlUser">
-                    <input type="text" class="form-control" id="user_name" name="user_name" placeholder="Tên Đăng Nhập" />
+                    @Html.EditorFor(model => model.id, new { htmlAttributes = new { id = "user_name", @class = "form-control", @placeholder = "Tên Đăng Nhập", type = "text" } })
                 </div>
 
                 <div class="form-group" id="pnlPass">
-                    <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Mật Khẩu" />
+                    @Html.EditorFor(model => model.password, new { htmlAttributes = new { id = "pwd", @class = "form-control", @placeholder = "Mật Khẩu", type = "password" } })
                 </div>
-
-                <input type="submit" value="ĐĂNG NHẬP" id="btnDangNhap" />
-
+                <input type="submit" value="Đăng Nhập" id="btnDangNhap" />
                 <div class="form-group" id="pnlLinkQuenMK">
                     <a href="#" id="linkQuenMatKhau">Quên Mật Khẩu ?</a>
                 </div>
@@ -35,6 +35,30 @@
     <script src="~/Scripts/jquery-3.5.1.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
     <script>
+        var sinhVien = {};
+        function Login() {
+            var data = {
+                'id': $("#user_name").val(),
+                'password': $("#pwd").val()
+            }
+            $.ajax({
+                type: "POST",
+                dataType: "json",
+                url: "https://localhost:44330/api/GiangVien/Login",
+                data: data,
+                success: function (data) {
+                    debugger
+                    sinhVien = data;
+                    alert(data);
+                    console.log(data);
+                    //afterLogin();
+                },
+                error: function (error) {
+                    jsonValue = jQuery.parseJSON(error.responseText);
+                    alert("error" + error.responseText);
+                }
+            });
+        };
 
     </script>
 </body>

@@ -12,33 +12,15 @@ namespace DangKyDoAn_BTL.Controllers
        
         public ActionResult Index()
         {
-            return RedirectToAction("ThongTinGiangVien","GiangVien");
+            var user = Session["user"] as SinhVien;
+            return View(user);
         }
 
-        public ActionResult ThongTinGiangVien() {
-            //if(Session["IDGiangVien"] == null)
-            //{
-            //    return RedirectToAction("Login","GiangVien");
-            //}
-            //Session["IDGiangVien"] = 1;
-            //giangVienDAL = new GiangVienDAL();
-            //GiangVien gv = giangVienDAL.GetGiangVien(Convert.ToInt32(Session["IDGiangVien"]));
+        public ActionResult InforGiangVien() 
+        {
+
 
             return View();
-        }
-
-        [HttpPost]
-        public ActionResult ThongTinGiangVien(GiangVien gv)
-        {
-            //if(Session["IDGiangVien"] == null)
-            //{
-            //    return RedirectToAction("Login","GiangVien");
-            //}
-
-            //giangVienDAL = new GiangVienDAL();
-            //GiangVien gv = giangVienDAL.GetGiangVien(Convert.ToInt32(Session["IDGiangVien"]));
-
-            return View(gv);
         }
     }
 }

@@ -22,6 +22,7 @@ namespace Entities
         public string password { get; set; }
 
         public string email { get; set; }
+        public string avatarLink { get; set; }
 
         public string diaChi { get; set; }
 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web;
 
 namespace Server_API.Controllers
 {
@@ -27,6 +28,8 @@ namespace Server_API.Controllers
         public IHttpActionResult GetById(int id)
         {
             return Json(sinhVienService.GetById(id));
+            //var user = HttpContext.Current.Session["SV" + id] as SinhVien;
+            //return Json(user);
         }
         [Route("api/SinhVien/Add")]
         public IHttpActionResult Add(SinhVien sinhVien)
@@ -48,7 +51,15 @@ namespace Server_API.Controllers
         {
             return Json(sinhVienService.Login(dto.id, dto.password));
         }
-
-
+       [Route("api/SinhVien/DangKyDoAn")]
+        public IHttpActionResult DangKyDoAn(DangKyDoAnDto dto)
+        {
+            return Json(sinhVienService.DangKyDoAn(dto.idSinhVien,dto.idDoAn));
+        }
+        [Route("api/SinhVien/HuyDoAn")]
+        public IHttpActionResult HuyDoAn(int id)
+        {
+            return Json(sinhVienService.HuyDoAn(id));
+        }
     }
 }

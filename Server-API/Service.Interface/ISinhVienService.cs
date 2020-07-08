@@ -10,5 +10,7 @@ namespace Service.Interface
     public interface ISinhVienService : IBaseService<SinhVien>
     {
         SinhVien Login(int idSinhVien, string password);
+        SinhVien HuyDoAn(int id);
+        SinhVien DangKyDoAn(int idSinhVien, int idDoAn);
     }
 }

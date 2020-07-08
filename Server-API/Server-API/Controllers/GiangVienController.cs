@@ -48,5 +48,10 @@ namespace Server_API.Controllers
         {
             return Json(giangVienService.Update(giangVien));
         }
+        [Route("api/GiangVien/Login")]
+        public IHttpActionResult Login(LoginDto dto)
+        {
+            return Json(giangVienService.Login(dto.id, dto.password));
+        }
     }
 }

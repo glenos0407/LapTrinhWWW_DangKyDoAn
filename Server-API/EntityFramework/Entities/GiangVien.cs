@@ -21,6 +21,9 @@ namespace Model.Entities
         [Required]
         public string password { get; set; }
 
+        [Required]
+        public string avatarLink { get; set; }
+
         public string email { get; set; }
 
         public string diaChi { get; set; }

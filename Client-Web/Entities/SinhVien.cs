@@ -29,6 +29,8 @@ namespace Entities
         [RegularExpression("^[0-9]{10}$")]
         public string soDienThoai { get; set; }
 
+        public string avatarLink { get; set; }
+
         public string email { get; set; }
 
         [Required]

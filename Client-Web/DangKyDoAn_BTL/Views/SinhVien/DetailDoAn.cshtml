@@ -1,0 +1,194 @@
+﻿@model Entities.DoAn
+@{
+    ViewBag.Title = "Quản Lý Đồ Án";
+    ViewBag.SinhVien = (Session["user"] as Entities.SinhVien);
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    // khởi tạo webgrid
+
+    //WebGrid grid = new WebGrid(source: Model, rowsPerPage: 10);
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<input id="idDoAnDaDangKy" style="display: none" value="@ViewBag.SinhVien.idDoAn" />
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h2>Thông Tin </h2>
+                <form class="form-horizontal" style="text-align: left;">
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="ma">Mã</label>
+                        <div class="col-sm-10">
+                            @Html.EditorFor(model => model.idDoAn, new { htmlAttributes = new { @class = "form-control", type = "text" } })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="ten">Tên</label>
+                        <div class="col-sm-10">
+                            @Html.EditorFor(model => model.tenDoAn, new { htmlAttributes = new { @class = "form-control", type = "text" } })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="noidung">Nội dung</label>
+                        <div class="col-sm-10">
+                            @Html.TextAreaFor(model => model.noiDung, new { htmlAttributes = new { @class = "form-control", type = "text"}, @style = "width: 100%; height: 200px" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="khoa">Khoa</label>
+                        <div class="col-sm-10">
+                            @Html.EditorFor(model => model.khoa, new { htmlAttributes = new { @class = "form-control", type = "text" } })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="khoahoc">Khóa học</label>
+                        <div class="col-sm-10">
+                            @Html.EditorFor(model => model.khoaHoc, new { htmlAttributes = new { @class = "form-control", type = "text" } })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="tengv">Tên Giảng Viên</label>
+                        <div class="col-sm-10">
+                            @Html.EditorFor(model => model.GiangVien.hoTen, new { htmlAttributes = new { @class = "form-control", type = "text" } })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="button" id="btnUpdateState" class="btn btn-success" style="width: 200px;" value="Đăng ký"></input>
+                    </div>
+                </form>
+            </div>
+        </div>
+            <nav class="nav navbar-default">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a href="#" class="navbar-brand"></a>
+                    </div>
+                    <div class="collapse navbar-collapse">
+                        @using (Html.BeginForm("index", "home", FormMethod.Get, new { @class = "navbar-form navbar-left" }))
+                        {
+                            <div class="form-group">
+                                <input type="text" name="masinhvien" value="@ViewBag.masinhvien" class="form-control" placeholder="Mã sinh viên" />
+                                <input type="text" name="tendoan" value="@ViewBag.tendoan" class="form-control" placeholder="Tên đồ án" />
+
+                            </div>
+                            <button type="submit" value="Search" class="btn btn-success">
+                                <span class="glyphicon glyphicon-search"></span> Search
+                            </button>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-primary">Chọn Giáo Viên</button>
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">AAA</a></li>
+                                    <li><a href="#">BBB</a></li>
+                                </ul>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </nav>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12" style="text-align: center; font-size: 30px;">
+                        DANH SÁCH ĐỒ ÁN
+                    </div>
+                </div>
+                </br>
+                <form id="form2">
+                    <div class="row">
+                        <div class="col-sm-12" style="border-style: groove; padding: 1px 1px 1px 1px; font-size: 15px;">
+                            <div class="table-responsive-lg" style="text-align: center;">
+                                <table class="table table-striped table-bordered table-hover" id="tableDKDoan">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th scope="col" style="width:5%;">ID</th>
+                                            <th scope="col" style="width:45%;">Tên đồ án</th>
+                                            <th scope="col" style="width:30%;">Tên giảng viên</th>
+                                            <th scope="col" style="width:20%;">Tình trạng</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="listDoAn">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+    </div>
+    <script src="~/Scripts/jquery-3.5.1.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var idDoAnDaDangKy = $("#idDoAnDaDangKy").val();
+            var thisDoAn = $("#idDoAn").val();
+
+            if (idDoAnDaDangKy == thisDoAn) {
+                $("#btnUpdateState").removeClass("btn-success").addClass("btn-danger");
+                $("#btnUpdateState").prop('value', 'Hủy');
+                console.log("ahihi");
+            } else {
+
+                console.log("ahaha");
+                console.log(idDoAnDaDangKy);
+                console.log(thisDoAn);
+            }
+
+            var data = [];
+            var idDoAn = $("#idDoAn").val();
+            $.ajax({
+                type: "GET",
+                dataType: "json",
+                url: "https://localhost:44330/api/DoAn/GetAll",
+                data: data,
+                success: function (data) {
+                    var s = "";
+                    for (var i = 0; i < data.length; i++) {
+                        s += "<tr>";
+                        s += "<th scope=\"row\">" + data[i].idDoAn + "</th>";
+                        s += "<td>" + data[i].tenDoAn + "</td>";
+                        s += "<td>" + data[i].GiangVien.hoTen + "</td>";
+                        s += "<td>";
+                        if ((idDoAn != data[i].idDoAn) && (idDoAn > 0)) {
+                            s += "<button class=\"btn btn-primary btnClickDetail\" href=\"DetailDoAn?Id=" + data[i].idDoAn + "\" disabled>Chi Tiết</button>"
+                        }
+                        else {
+                            s += "<a class=\"btn btn-primary btnClickDetail\" href=\"DetailDoAn?Id=" + data[i].idDoAn + "\">Chi Tiết</a>"
+                        }
+                        s += "</td >";
+                        s += "</tr >";
+                    }
+                    document.getElementById("listDoAn").innerHTML = s;
+                },
+                error: function (error) {
+                    jsonValue = jQuery.parseJSON(error.responseText);
+                    alert("error" + error.responseText);
+                }
+            });
+        });
+        $(function () {
+            try {
+                var dir = $('#dir').val();
+                var col = $('#col').val();
+                var header = $("th a[href*=" + col + "]");
+                if (dir == "Ascending") {
+                    header.text(header.text() + " ▲")
+                }
+                if (dir == "Descending") {
+                    header.text(header.text() + " ▼");
+                }
+            } catch (e) {
+
+            }
+        });
+        function check() {
+            var idDoAnDaDangKy = $("#idDoAnDaDangKy").val();
+            var thisDoAn = $("idDoAn").val();
+            var s = "";
+
+            if (idDoAnDaDangKy == thisDoAn) {
+                $("#btnUpdateState").removeClass("btn-success").addClass("btn-danger");
+                $("#btnUpdateState").val("Hủy");
+            }
+        }
+
+    </script>

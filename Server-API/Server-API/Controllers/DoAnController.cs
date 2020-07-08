@@ -31,7 +31,7 @@ namespace Server_API.Controllers
         [Route("api/DoAn/GetAll")]
         public IHttpActionResult GetAll()
         {
-            return Json(doAnService.GetAll());
+            return Json(doAnService.GetAll().ToList());
         }
         [Route("api/DoAn/GetById")]
         public IHttpActionResult GetById(int id)
