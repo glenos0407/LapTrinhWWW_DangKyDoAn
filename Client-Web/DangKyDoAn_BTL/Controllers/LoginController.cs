@@ -68,7 +68,7 @@ namespace DangKyDoAn_BTL.Controllers
             if (sinhVien != null)
             {
                 Session["user"] = sinhVien;
-                return RedirectToAction("Index", "SinhVien");
+                return RedirectToAction("Index", "SinhVien", sinhVien.idSinhVien);
             }
             else
                 return View("LoginSinhVien");
@@ -89,7 +89,7 @@ namespace DangKyDoAn_BTL.Controllers
             if (giangVien != null)
             {
                 Session["user"] = giangVien;
-                return RedirectToAction("Index", "GiangVien");
+                return RedirectToAction("Index", "GiangVien", giangVien.idGiangVien);
             }
             else
                 return View("LoginGiangVien");
@@ -106,21 +106,21 @@ namespace DangKyDoAn_BTL.Controllers
         public ActionResult LoginAdmin(LoginDto dto)
         {
             var result = GetById(dto, "Admin").GetAwaiter().GetResult();
-            var admin = JsonConvert.DeserializeObject<GiangVien>(result.ToString());
+            var admin = JsonConvert.DeserializeObject<Admin>(result.ToString());
             if (admin != null)
             {
                 Session["user"] = admin;
-                return RedirectToAction("Index", "Admin");
+                return RedirectToAction("Index", "Admin", admin.idAdmin);
             }
             else
                 return View("LoginGiangVien");
         }
         #endregion
 
-        //public ActionResult Logout(string check)
-        //{
-        //    if()
-        //    return View(Login)
-        //}
+        public ActionResult Logout(string check)
+        {
+            Session["user"] = null;
+            return View("LoginSinhVien");
+        }
     }
 }

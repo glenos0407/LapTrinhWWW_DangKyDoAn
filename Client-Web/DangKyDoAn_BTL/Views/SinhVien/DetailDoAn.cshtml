@@ -3,12 +3,10 @@
     ViewBag.Title = "Quản Lý Đồ Án";
     ViewBag.SinhVien = (Session["user"] as Entities.SinhVien);
     Layout = "~/Views/Shared/_Layout.cshtml";
-    // khởi tạo webgrid
-
-    //WebGrid grid = new WebGrid(source: Model, rowsPerPage: 10);
 }
 <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
 <input id="idDoAnDaDangKy" style="display: none" value="@ViewBag.SinhVien.idDoAn" />
+<input id="idSinhVien" style="display: none" value="@ViewBag.SinhVien.idSinhVien" />
     <div class="container">
         <div class="panel panel-default">
             <div class="panel-body">
@@ -51,41 +49,11 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <input type="button" id="btnUpdateState" class="btn btn-success" style="width: 200px;" value="Đăng ký"></input>
+                        <input type="button" id="btnUpdateState" class="btn btn-success" style="width: 200px;" value="Đăng ký"/>
                     </div>
                 </form>
             </div>
         </div>
-            <nav class="nav navbar-default">
-                <div class="container">
-                    <div class="navbar-header">
-                        <a href="#" class="navbar-brand"></a>
-                    </div>
-                    <div class="collapse navbar-collapse">
-                        @using (Html.BeginForm("index", "home", FormMethod.Get, new { @class = "navbar-form navbar-left" }))
-                        {
-                            <div class="form-group">
-                                <input type="text" name="masinhvien" value="@ViewBag.masinhvien" class="form-control" placeholder="Mã sinh viên" />
-                                <input type="text" name="tendoan" value="@ViewBag.tendoan" class="form-control" placeholder="Tên đồ án" />
-
-                            </div>
-                            <button type="submit" value="Search" class="btn btn-success">
-                                <span class="glyphicon glyphicon-search"></span> Search
-                            </button>
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-primary">Chọn Giáo Viên</button>
-                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#">AAA</a></li>
-                                    <li><a href="#">BBB</a></li>
-                                </ul>
-                            </div>
-                        }
-                    </div>
-                </div>
-            </nav>
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12" style="text-align: center; font-size: 30px;">
@@ -125,12 +93,6 @@
             if (idDoAnDaDangKy == thisDoAn) {
                 $("#btnUpdateState").removeClass("btn-success").addClass("btn-danger");
                 $("#btnUpdateState").prop('value', 'Hủy');
-                console.log("ahihi");
-            } else {
-
-                console.log("ahaha");
-                console.log(idDoAnDaDangKy);
-                console.log(thisDoAn);
             }
 
             var data = [];
@@ -148,7 +110,7 @@
                         s += "<td>" + data[i].tenDoAn + "</td>";
                         s += "<td>" + data[i].GiangVien.hoTen + "</td>";
                         s += "<td>";
-                        if ((idDoAn != data[i].idDoAn) && (idDoAn > 0)) {
+                        if ($("#btnUpdateState").val() == "Hủy") {
                             s += "<button class=\"btn btn-primary btnClickDetail\" href=\"DetailDoAn?Id=" + data[i].idDoAn + "\" disabled>Chi Tiết</button>"
                         }
                         else {
@@ -180,15 +142,42 @@
 
             }
         });
-        function check() {
-            var idDoAnDaDangKy = $("#idDoAnDaDangKy").val();
-            var thisDoAn = $("idDoAn").val();
-            var s = "";
-
-            if (idDoAnDaDangKy == thisDoAn) {
-                $("#btnUpdateState").removeClass("btn-success").addClass("btn-danger");
-                $("#btnUpdateState").val("Hủy");
+        $("#btnUpdateState").on("click", function () {
+            if ($("#btnUpdateState").val() == "Đăng ký") {
+                debugger
+                var data = {
+                    'idSinhVien': $("#idSinhVien").val(),
+                    'idDoAn': $("#idDoAn").val()
+                };
+                $.ajax({
+                    type: "POST",
+                    dataType: "json",
+                    url: "https://localhost:44330/api/SinhVien/DangKyDoAn",
+                    data: data,
+                    success: function (data) {
+                        window.location.href = "Index"
+                    },
+                    error: function (error) {
+                        jsonValue = jQuery.parseJSON(error.responseText);
+                        alert("error" + error.responseText);
+                    },
+                });
             }
-        }
+            else if ($("#btnUpdateState").val() == "Hủy") {
+                var id = $("#idSinhVien").val();
+                $.ajax({
+                    type: "POST",
+                    dataType: "json",
+                    url: "https://localhost:44330/api/SinhVien/HuyDoAn?Id=" + id,
+                    success: function (data) {
+                        window.location.href = "Index"
+                    },
+                    error: function (error) {
+                        jsonValue = jQuery.parseJSON(error.responseText);
+                        alert("error" + error.responseText);
+                    },
 
+                });
+            };
+        });
     </script>

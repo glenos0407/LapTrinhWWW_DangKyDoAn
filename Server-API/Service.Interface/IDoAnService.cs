@@ -10,6 +10,6 @@ namespace Service.Interface
     public interface IDoAnService : IBaseService<DoAn>
     {
         int GetID(string tendoan);
-        DoAn GetDoAnByIDGiangVien(int idgiangvien);
+         IEnumerable<DoAnDto> GetDoAnByIDGiangVien(int idgiangvien);
     }
 }

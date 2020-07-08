@@ -34,17 +34,47 @@ namespace DangKyDoAn_BTL.Controllers
             return "";
         }
 
+        private async Task<string> GetSinhVienById(int id)
+        {
+            var response = client.GetAsync("api/SinhVien/GetById?Id=" + id).Result;
+            if (response.IsSuccessStatusCode)
+            {
+                return await response.Content.ReadAsStringAsync();
+            }
+            return "";
+        }
+
+        //public ActionResult SinhVienEditing(int id)
+        //{
+        //    var result = GetSinhVienById(id).GetAwaiter().GetResult();
+        //    Session["user"] = JsonConvert.DeserializeObject<SinhVien>(result.ToString());
+        //    return View("Index");
+        //}
         public ActionResult Index()
         {
-            var user = Session["user"] as SinhVien;
-            return View(user);
+            if(Session["user"] != null)
+            {
+                int id = (Session["user"] as SinhVien).idSinhVien;
+                var result = GetSinhVienById(id).GetAwaiter().GetResult();
+                Session["user"] = JsonConvert.DeserializeObject<SinhVien>(result.ToString());
+                var user = Session["user"] as SinhVien;
+                return View(user);
+            }
+            else
+            {
+                return RedirectToAction("LoginSinhVien", "Login");
+            }
         }
         public ActionResult DetailDoAn(int id)
         {
-            var result = GetById(id).GetAwaiter().GetResult();
-            var doAn = JsonConvert.DeserializeObject<DoAn>(result.ToString());
-            ViewBag.idDoAn = doAn.idDoAn;
-            return View(doAn);
+            if(Session["user"] != null)
+            {
+                var result = GetById(id).GetAwaiter().GetResult();
+                var doAn = JsonConvert.DeserializeObject<DoAn>(result.ToString());
+                ViewBag.idDoAn = doAn.idDoAn;
+                return View(doAn);
+            }
+            return RedirectToAction("LoginSinhVien", "Login");
         } 
     }
 }

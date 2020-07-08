@@ -41,9 +41,17 @@ namespace Service
             return doAnRepository.GetByCondition(x => x.idDoAn.Equals(id));
         }
 
-        public DoAn GetDoAnByIDGiangVien(int idgiangvien)
+        public IEnumerable<DoAnDto> GetDoAnByIDGiangVien(int idgiangvien)
         {
-            return doAnRepository.GetByCondition(x => x.idGiangVien.Equals(idgiangvien));
+            return doAnRepository.GetByWhere(x => x.idGiangVien.Equals(idgiangvien))
+                .Select(s => new DoAnDto { 
+                    idDoAn = s.idDoAn,
+                    idGiangVien = s.idGiangVien,
+                    khoa = s.khoa,
+                    khoaHoc = s.khoaHoc,
+                    noiDung = s.noiDung,
+                    tenDoAn = s.tenDoAn
+                });
         }
 
         public int GetID(string tendoan)

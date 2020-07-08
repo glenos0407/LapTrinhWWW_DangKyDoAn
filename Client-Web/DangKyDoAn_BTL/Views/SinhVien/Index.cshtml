@@ -171,7 +171,6 @@
             url: "https://localhost:44330/api/DoAn/GetAll",
             data: data,
             success: function (data) {
-                //console.log($("#inputIdDoAn").val() > 0)
                 var s = "";
                 for (var i = 0; i < data.length; i++) {
                     s += "<tr>";
@@ -190,6 +189,7 @@
                     s += "</tr >";
                 }
                 document.getElementById("listDoAn").innerHTML = s;
+
             },
             error: function (error) {
                 jsonValue = jQuery.parseJSON(error.responseText);

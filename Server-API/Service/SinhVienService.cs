@@ -62,6 +62,7 @@ namespace Service
                 existing.khoa = entity.hoTen;
                 existing.nienKhoa = entity.nienKhoa;
                 existing.soDienThoai = entity.soDienThoai;
+                existing.avatarLink = entity.avatarLink;
                 existing.idDoAn = entity.idDoAn;
                 return sinhVienRepository.Update(existing);
             }
@@ -87,6 +88,30 @@ namespace Service
                 return sinhVienRepository.Update(existing);
             }
             return null;
+        }
+
+        public bool UpdateDiem(int id, double diem)
+        {
+            var existing = GetById(id);
+            if (existing != null)
+            {
+                existing.diem = diem;
+                sinhVienRepository.Update(existing);
+                return true;
+            }
+            return false;
+        }
+
+        public IEnumerable<SinhVienDiemDto> GetSinhVienByIdDoAn(int idDoAn)
+        {
+            return sinhVienRepository.GetByWhere(x => x.idDoAn == idDoAn)
+                .Select(x => new SinhVienDiemDto { 
+                    diem = x.diem,
+                    hoTen = x.hoTen,
+                    idSinhVien = x.idSinhVien,
+                    khoa = x.khoa,
+                    nienKhoa = x.nienKhoa
+                });
         }
     }
 }

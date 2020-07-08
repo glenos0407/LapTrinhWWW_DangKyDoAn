@@ -51,7 +51,12 @@ namespace Server_API.Controllers
         {
             return Json(sinhVienService.Login(dto.id, dto.password));
         }
-       [Route("api/SinhVien/DangKyDoAn")]
+        [Route("api/SinhVien/Update")]
+        public IHttpActionResult Update(SinhVien sv)
+        {
+            return Json(sinhVienService.Update(sv));
+        }
+        [Route("api/SinhVien/DangKyDoAn")]
         public IHttpActionResult DangKyDoAn(DangKyDoAnDto dto)
         {
             return Json(sinhVienService.DangKyDoAn(dto.idSinhVien,dto.idDoAn));
@@ -60,6 +65,18 @@ namespace Server_API.Controllers
         public IHttpActionResult HuyDoAn(int id)
         {
             return Json(sinhVienService.HuyDoAn(id));
+        }
+        
+        [Route("api/SinhVien/UpdateDiem")]
+        public IHttpActionResult UpdateDiem(int id, double diem)
+        {
+            return Json(sinhVienService.UpdateDiem(id,diem));
+        }
+        
+        [Route("api/SinhVien/GetSinhVienByIdDoAn")]
+        public IHttpActionResult GetSinhVienByIdDoAn(int id)
+        {
+            return Json(sinhVienService.GetSinhVienByIdDoAn(id));
         }
     }
 }

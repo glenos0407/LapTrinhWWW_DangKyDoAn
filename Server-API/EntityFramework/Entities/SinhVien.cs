@@ -34,6 +34,8 @@ namespace Model.Entities
 
         public string email { get; set; }
 
+        public double? diem { get; set; }
+
         [Required]
         public string khoa { get; set; }
 

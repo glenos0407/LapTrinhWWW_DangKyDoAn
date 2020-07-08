@@ -54,7 +54,9 @@
     <Compile Include="Entities\Admin.cs" />
     <Compile Include="Entities\DoAn.cs" />
     <Compile Include="Entities\DTO\DangKyDoAnDto.cs" />
+    <Compile Include="Entities\DTO\DoAnDto.cs" />
     <Compile Include="Entities\DTO\LoginDto.cs" />
+    <Compile Include="Entities\DTO\SinhVienDiemDto.cs" />
     <Compile Include="Entities\GiangVien.cs" />
     <Compile Include="Entities\SinhVien.cs" />
     <Compile Include="Migrations\202006281947460_Init.cs" />
@@ -72,6 +74,14 @@
     <Compile Include="Migrations\202007071209384_addAvatar.cs" />
     <Compile Include="Migrations\202007071209384_addAvatar.Designer.cs">
       <DependentUpon>202007071209384_addAvatar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007081815086_updateDB.cs" />
+    <Compile Include="Migrations\202007081815086_updateDB.Designer.cs">
+      <DependentUpon>202007081815086_updateDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007081950121_updateSinhVien_Diem.cs" />
+    <Compile Include="Migrations\202007081950121_updateSinhVien_Diem.Designer.cs">
+      <DependentUpon>202007081950121_updateSinhVien_Diem.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -92,6 +102,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007071209384_addAvatar.resx">
       <DependentUpon>202007071209384_addAvatar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007081815086_updateDB.resx">
+      <DependentUpon>202007081815086_updateDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007081950121_updateSinhVien_Diem.resx">
+      <DependentUpon>202007081950121_updateSinhVien_Diem.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

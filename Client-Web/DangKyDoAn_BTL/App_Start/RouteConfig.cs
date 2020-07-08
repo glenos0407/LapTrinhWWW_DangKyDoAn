@@ -18,6 +18,12 @@ namespace DangKyDoAn_BTL
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Login", action = "LoginSinhVien", id = UrlParameter.Optional }
             );
+            
+            routes.MapRoute(
+                name: "GiangVien",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Login", action = "LoginGiangVien", id = UrlParameter.Optional }
+            );
         }
     }
 }

@@ -21,11 +21,11 @@
                         <form>
                             <div class="form-group">
                                 <label for="inputMaSinhVien">Mã giảng viên</label>
-                                @Html.EditorFor(model => model.idGiangVien, new { htmlAttributes = new { @class = "form-control", id = "inputMaSinhVien", type = "text" } })
+                                @Html.EditorFor(model => model.idGiangVien, new { htmlAttributes = new { @class = "form-control", type = "text" } })
                             </div>
                             <div class="form-group">
                                 <label for="inputHoTen">Họ tên</label>
-                                @Html.EditorFor(model => model.hoTen, new { htmlAttributes = new { @class = "form-control", id = "inputHoTen", type = "text" } })
+                                @Html.EditorFor(model => model.hoTen, new { htmlAttributes = new { @class = "form-control", type = "text" } })
                             </div>
                             <div class="form-group">
                                 <label for="inputChucVu">Chức vụ</label>
@@ -167,33 +167,34 @@
 <script src="~/Scripts/jquery-3.5.1.js"></script>
 <script>
     $(document).ready(function () {
-        var data = []
+        var id = $("#idGiangVien").val()
+        console.log(id + " " + $("#idGiangVien").val());
         $.ajax({
             type: "GET",
             dataType: "json",
-            url: "https://localhost:44330/api/DoAn/GetAll",
-            data: data,
+            url: "https://localhost:44330/api/DoAn/GetDoAnByIDGiangVien",
+            data: {
+                id: id,
+            },
             success: function (data) {
+                console.log(id + " " + $("#idGiangVien").val());
                 console.log(data);
-                console.log(data.length);
-                console.log(data[0].idDoAn);
                 var s = "";
                 for (var i = 0; i < data.length; i++) {
                     s += "<tr>";
                     s += "<th scope=\"row\">" + data[i].idDoAn + "</th>";
                     s += "<td>" + data[i].tenDoAn + "</td>";
-                    s += "<td>" + data[i].GiangVien.hoTen + "</td>";
+                    s += "<td>" + $("#hoTen").val() + "</td>";
                     s += "<td>";
-                    s += "<button type=\"button\" class=\"btn btn-primary\" id=\"btnDangKy\" data-dismiss=\"modal\" href=\"#\">Đăng ký</button>"
+                    s += "<a class=\"btn btn-primary btnClickDetail\" href=\"DetailDoAn?Id=" + data[i].idDoAn + "\">Chi Tiết</a>"
                     s += "</td >";
                     s += "</tr >";
                 }
                 document.getElementById("listDoAn").innerHTML = s;
-            console.log(data)
             },
             error: function (error) {
                 jsonValue = jQuery.parseJSON(error.responseText);
-                alert("error" + error.responseText);
+                alert(id + " error" + error.responseText);
             }
         });
     })

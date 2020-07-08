@@ -366,10 +366,10 @@
     <Content Include="Views\Login\LoginSinhVien.cshtml" />
     <Content Include="Views\Login\LoginGiangVien.cshtml" />
     <Content Include="Views\Login\LoginAdmin.cshtml" />
-    <Content Include="Views\GiangVien\InforGiangVien.cshtml" />
     <Content Include="Views\GiangVien\Index.cshtml" />
     <Content Include="Views\SinhVien\Index.cshtml" />
     <Content Include="Views\SinhVien\DetailDoAn.cshtml" />
+    <Content Include="Views\GiangVien\DetailDoAn.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

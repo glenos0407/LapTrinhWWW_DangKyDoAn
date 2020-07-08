@@ -12,5 +12,7 @@ namespace Service.Interface
         SinhVien Login(int idSinhVien, string password);
         SinhVien HuyDoAn(int id);
         SinhVien DangKyDoAn(int idSinhVien, int idDoAn);
+        bool UpdateDiem(int id, double diem);
+        IEnumerable<SinhVienDiemDto> GetSinhVienByIdDoAn(int idDoAn);
     }
 }
