@@ -2,14 +2,75 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Text;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Entities;
+using Newtonsoft.Json;
 
 namespace DangKyDoAn_BTL.Controllers
 {
     public class QuanLyGiangVienController : Controller
     {
+        private const string URL = "https://localhost:44330/";
+        static HttpClient client;
+
+        public QuanLyGiangVienController()
+        {
+            client = new HttpClient();
+            client.BaseAddress = new Uri(URL);
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+        }
+
+        private async Task<string> AddGiangVien(GiangVien gv)
+        {
+            string contentString =
+                "{ \"idGiangVien\" : " + 0 + "," +
+                "\"hoTen\": \"" + gv.hoTen + "\"," +
+                "\"password\": \"" + gv.password + "\"," +
+                "\"avatarLink\": \"" + gv.avatarLink + "\"," +
+                "\"email\": \"" + gv.email + "\"," +
+                "\"diaChi\": \"" + gv.diaChi + "\"," +
+                "\"soDienThoai\": \"" + gv.soDienThoai + "\"," +
+                "\"chucVu\": \"" + gv.chucVu + "\"," +
+                "\"khoa\": \"" + gv.khoa + "\"," +
+                "\"DoAns\": " + "null" + "}";
+            var content = new StringContent(contentString, Encoding.UTF8, "application/json");
+
+            var response = client.PostAsync("api/GiangVien/Add", content).Result;
+            if (response.IsSuccessStatusCode)
+            {
+                return await response.Content.ReadAsStringAsync();
+            }
+            return "";
+        }
+        
+        private async Task<string> UpdateGiangVien(GiangVien gv)
+        {
+            string contentString =
+                "{ \"idGiangVien\" : " + gv.idGiangVien + "," +
+                "\"hoTen\": \"" + gv.hoTen + "\"," +
+                "\"password\": \"" + gv.password + "\"," +
+                "\"avatarLink\": \"" + gv.avatarLink + "\"," +
+                "\"email\": \"" + gv.email + "\"," +
+                "\"diaChi\": \"" + gv.diaChi + "\"," +
+                "\"soDienThoai\": \"" + gv.soDienThoai + "\"," +
+                "\"chucVu\": \"" + gv.chucVu + "\"," +
+                "\"khoa\": \"" + gv.khoa + "\"," +
+                "\"DoAns\": " + "null" + "}";
+            var content = new StringContent(contentString, Encoding.UTF8, "application/json");
+
+            var response = client.PostAsync("api/GiangVien/Update", content).Result;
+            if (response.IsSuccessStatusCode)
+            {
+                return await response.Content.ReadAsStringAsync();
+            }
+            return "";
+        }
         //
         // GET: /QuanLyGiangVien/
         public ActionResult Index()
@@ -39,12 +100,11 @@ namespace DangKyDoAn_BTL.Controllers
         }
         [ValidateInput(false)]
         [HttpPost]
-        public ActionResult TaoMoiGiangVien(GiangVien sv)
+        public ActionResult TaoMoiGiangVien(GiangVien gv)
         {
-            //db.GiangViens.AddObject(sv);
-            //db.SaveChanges();
-            //return RedirectToAction("Index");
-            return View();
+            var json = AddGiangVien(gv).GetAwaiter().GetResult();
+            var result = JsonConvert.DeserializeObject<GiangVien>(json.ToString());
+            return View(result);
         }
         [HttpGet]
         public ActionResult ChinhSuaGiangVien(int IdGiangVien)

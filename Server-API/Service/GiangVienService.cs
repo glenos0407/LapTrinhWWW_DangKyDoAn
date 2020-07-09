@@ -62,7 +62,8 @@ namespace Service
                 existing.hoTen = entity.hoTen;
                 existing.khoa = entity.khoa;
                 existing.soDienThoai = entity.soDienThoai;
-                return giangVienRepository.Update(entity);
+                existing.avatarLink = entity.avatarLink;
+                return giangVienRepository.Update(existing);
             }
             return null;
         }

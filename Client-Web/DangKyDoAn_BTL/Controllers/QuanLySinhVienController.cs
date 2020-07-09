@@ -42,6 +42,7 @@ namespace DangKyDoAn_BTL.Controllers
             }
             return "";
         }
+
         //
         // GET: /QuanLySinhVien/
         public ActionResult Index()
