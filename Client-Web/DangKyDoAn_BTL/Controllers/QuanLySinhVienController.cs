@@ -1,9 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
@@ -42,7 +43,62 @@ namespace DangKyDoAn_BTL.Controllers
             }
             return "";
         }
+        private async Task<string> Add(SinhVien sv)
+        {
+            string contentString =
+                            "{ \"idSinhVien\" : " + 0 + "," +
+                            "\"hoTen\": \"" + sv.hoTen + "\"," +
+                            "\"password\": \"" + sv.password + "\"," +
+                            "\"avatarLink\": \"" + sv.avatarLink + "\"," +
+                            "\"nienKhoa\": \"" + sv.email + "\"," +
+                            "\"diaChi\": \"" + sv.diaChi + "\"," +
+                            "\"soDienThoai\": \"" + sv.soDienThoai + "\"," +
+                            "\"avatarLink\": \"" + sv.avatarLink + "\"," +
+                            "\"email\": \"" + sv.email + "\"," +
+                            "\"khoa\": \"" + sv.khoa + "\"," +
+                            "\"idDoAn\": " + "null" + "}" +
+                            "\"DoAns\": " + "null" + "}";
+            var content = new StringContent(contentString, Encoding.UTF8, "application/json");
+            var response = client.GetAsync("api/SinhVien/Add", content).Result;
+            if (response.IsSuccessStatusCode)
+            {
+                return await response.Content.ReadAsStringAsync();
+            }
+            return "";
+        }
+        private async Task<string> Update(SinhVien sv)
+        {
+            string contentString =
+                            "{ \"idSinhVien\" : " + sv.idSinhVien + "," +
+                            "\"hoTen\": \"" + sv.hoTen + "\"," +
+                            "\"password\": \"" + sv.password + "\"," +
+                            "\"avatarLink\": \"" + sv.avatarLink + "\"," +
+                            "\"nienKhoa\": \"" + sv.email + "\"," +
+                            "\"diaChi\": \"" + sv.diaChi + "\"," +
+                            "\"soDienThoai\": \"" + sv.soDienThoai + "\"," +
+                            "\"avatarLink\": \"" + sv.avatarLink + "\"," +
+                            "\"email\": \"" + sv.email + "\"," +
+                            "\"khoa\": \"" + sv.khoa + "\"," +
+                            "\"idDoAn\": " + "null" + "}" +
+                            "\"DoAns\": " + "null" + "}";
+            var content = new StringContent(contentString, Encoding.UTF8, "application/json");
 
+            var response = client.PostAsync("api/SinhVien/Update", content).Result;
+            if (response.IsSuccessStatusCode)
+            {
+                return await response.Content.ReadAsStringAsync();
+            }
+            return "";
+        }
+        private async Task<string> GetById(int id)
+        {
+            var response = client.GetAsync("api/SinhVien/GetById" + id).Result;
+            if (response.IsSuccessStatusCode)
+            {
+                return await response.Content.ReadAsStringAsync();
+            }
+            return "";
+        }
         //
         // GET: /QuanLySinhVien/
         public ActionResult Index()
@@ -75,46 +131,23 @@ namespace DangKyDoAn_BTL.Controllers
         [HttpPost]
         public ActionResult TaoMoiSinhVien(SinhVien sv)
         {
-            //db.SinhViens.AddObject(sv);
-            //db.SaveChanges();
-            //return RedirectToAction("Index");
-            return View();
+            var json = Add(sv).GetAwaiter().GetResult();
+            var result = JsonConvert.DeserializeObject<SinhVien>(json.ToString());
+            return View(result);
         }
         [HttpGet]
         public ActionResult ChinhSuaSinhVien(int IdSinhVien)
         {
-            //if (IdSinhVien == null)
-            //{
-            //    Response.StatusCode = 404;
-            //    return null;
-            //}
-            //SinhVien sv = db.SinhViens.SingleOrDefault(n => n.idSinhVien == IdSinhVien);
-            //if (sv == null)
-            //{
-            //    return HttpNotFound();
-            //}
-            //return View(sv);
-
-            SinhVien sv = new SinhVien();
-            int i = 999;
-            sv.idSinhVien = i;
-            sv.hoTen = "Nguyễn Sinh Viên 0" + i;
-            sv.password = i.ToString();
-            sv.nienKhoa = i.ToString();
-            sv.diaChi = "Đường " + i;
-            sv.soDienThoai = i.ToString();
-            sv.email = i + "_SinhVien@gmail.com";
-            sv.khoa = "CNTT_SinhVien";
+            SinhVien sv = JsonConvert.DeserializeObject<SinhVien>(GetById(IdSinhVien).GetAwaiter().GetResult().ToString());
             return View(sv);
         }
         [ValidateInput(false)]
         [HttpPost]
         public ActionResult ChinhSuaSinhVien(SinhVien model)
         {
-            //db.Entry(model).State = System.Data.Entity.EntityState.Modified;
-            //db.SaveChanges();
-            //return RedirectToAction("Index");
-            return View();
+            var json = Update(model).GetAwaiter().GetResult();
+            var result = JsonConvert.DeserializeObject<SinhVien>(json.ToString());
+            return View(result);
         }
         [HttpGet]
         public ActionResult XoaSinhVien(int IdSinhVien)
