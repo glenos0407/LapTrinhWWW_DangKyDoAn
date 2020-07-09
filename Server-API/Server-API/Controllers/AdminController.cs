@@ -53,5 +53,11 @@ namespace Server_API.Controllers
         {
             return Json(adminService.GetID(name));
         }
+
+        [Route("api/admin/Login")]
+        public IHttpActionResult Login(LoginDto dto)
+        {
+            return Json(adminService.Login(dto.id,dto.password));
+        }
     }
 }

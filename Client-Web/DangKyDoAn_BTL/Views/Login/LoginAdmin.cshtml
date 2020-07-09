@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@model Entities.Dto.LoginDto
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -17,11 +19,11 @@
                 </div>
 
                 <div class="form-group" id="pnlUser">
-                    <input type="text" class="form-control" id="user_name" name="user_name" placeholder="Tên Đăng Nhập" />
+                    @Html.EditorFor(model => model.id, new { htmlAttributes = new { id = "user_name", @class = "form-control", @placeholder = "Tên Đăng Nhập", type = "text" } })
                 </div>
 
                 <div class="form-group" id="pnlPass">
-                    <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Mật Khẩu" />
+                    @Html.EditorFor(model => model.password, new { htmlAttributes = new { id = "pwd", @class = "form-control", @placeholder = "Mật Khẩu", type = "password" } })
                 </div>
 
                 <input type="submit" value="ĐĂNG NHẬP" id="btnDangNhap" />

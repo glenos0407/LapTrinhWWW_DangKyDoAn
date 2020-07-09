@@ -54,4 +54,5 @@ namespace Server_API.Controllers
             return Json(giangVienService.Login(dto.id, dto.password));
         }
     }
+    // Data Transfer Object
 }

@@ -136,7 +136,42 @@
             DANH SÁCH ĐỒ ÁN
             <div class="form-group" style="text-align: right;">
                 <div class="form-group" style=" padding:  0 20px 0 0;">
-                    <button type="button" class="btn btn-primary btn-sm" id="btnThemDoAn">Thêm đồ án</button>
+                    <button type="button" class="btn btn-primary btn-sm" id="btnThemDoAn" data-toggle="modal" data-target="#themDoAnModal">Thêm đồ án</button>
+                    <!--Modal-->
+                    <div class="modal fade" id="themDoAnModal" role="dialog" aria-labelledby="myModalLabel2">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title" id="myModalLabel">Thêm Đồ Án</h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form role="form" action='#' method="post">
+                                        <div class="form-group">
+                                            <label for="tenDoAnModal">Tên đồ án</label>
+                                            <input type="text" class="form-control" id="tenDoAnModal">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="noiDungModal">Nội dung</label>
+                                            <input type="text" class="form-control" id="noiDungModal">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="nienKhoaModal">Niên khóa</label>
+                                            <input type="text" class="form-control" id="nienKhoaModal">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="khoaModal">Khoa</label>
+                                            <input type="text" class="form-control" value="Công Nghệ Thông Tin" disabled id="khoaModal">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary btn-block" id="btnXacNhan" data-dismiss="modal" href="#">Xác nhận</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -177,13 +212,13 @@
                 id: id,
             },
             success: function (data) {
-                console.log(id + " " + $("#idGiangVien").val());
                 console.log(data);
                 var s = "";
                 for (var i = 0; i < data.length; i++) {
                     s += "<tr>";
                     s += "<th scope=\"row\">" + data[i].idDoAn + "</th>";
                     s += "<td>" + data[i].tenDoAn + "</td>";
+                    console.log(data[i]);
                     s += "<td>" + $("#hoTen").val() + "</td>";
                     s += "<td>";
                     s += "<a class=\"btn btn-primary btnClickDetail\" href=\"DetailDoAn?Id=" + data[i].idDoAn + "\">Chi Tiết</a>"
@@ -197,5 +232,28 @@
                 alert(id + " error" + error.responseText);
             }
         });
-    })
+        $("#btnXacNhan").on("click", function () {
+            var data = {
+                idDoAn: 0,
+                tenDoAn: $("#tenDoAnModal").val(),
+                noiDung: $("#noiDungModal").val(),
+                khoaHoc: $("#khoaHocModal").val(),
+                khoa: $("#khoaModal").val(),
+                idGiangVien: $("#idGiangVien").val()
+            };
+            $.ajax({
+                type: "POST",
+                dataType: "json",
+                url: "https://localhost:44330/api/DoAn/Add",
+                data: data,
+                success: function (data) {
+                    alert("Thêm thành công")
+                },
+                error: function (error) {
+                    jsonValue = jQuery.parseJSON(error.responseText);
+                    alert(id + " error" + error.responseText);
+                }
+            })
+        });
+    });
 </script>

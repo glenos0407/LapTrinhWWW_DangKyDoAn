@@ -48,11 +48,18 @@ namespace DangKyDoAn_BTL.Controllers
         {
             if (Session["user"] != null)
             {
-                int id = (Session["user"] as GiangVien).idGiangVien;
-                var result = GetGiangVienById(id).GetAwaiter().GetResult();
-                Session["user"] = JsonConvert.DeserializeObject<GiangVien>(result.ToString());
-                var user = Session["user"] as GiangVien;
-                return View(user);
+                if(Session["user"] is GiangVien)
+                {
+                    int id = (Session["user"] as GiangVien).idGiangVien;
+                    var result = GetGiangVienById(id).GetAwaiter().GetResult();
+                    Session["user"] = JsonConvert.DeserializeObject<GiangVien>(result.ToString());
+                    var user = Session["user"] as GiangVien;
+                    return View(user);
+                }
+                else
+                {
+                    return RedirectToAction("Index", "SinhVien");
+                }
             }
             else
             {
@@ -64,10 +71,17 @@ namespace DangKyDoAn_BTL.Controllers
         {
             if(Session["user"] != null)
             {
-                var result = GetById(id).GetAwaiter().GetResult();
-                var doAn = JsonConvert.DeserializeObject<DoAn>(result.ToString());
-                ViewBag.idDoAn = doAn.idDoAn;
-                return View(doAn);
+                if (Session["user"] is GiangVien)
+                {
+                    var result = GetById(id).GetAwaiter().GetResult();
+                    var doAn = JsonConvert.DeserializeObject<DoAn>(result.ToString());
+                    ViewBag.idDoAn = doAn.idDoAn;
+                    return View(doAn);
+                }
+                else
+                {
+                    return RedirectToAction("Index", "SinhVien");
+                }
             }
             else
             {

@@ -110,10 +110,10 @@ namespace DangKyDoAn_BTL.Controllers
             if (admin != null)
             {
                 Session["user"] = admin;
-                return RedirectToAction("Index", "Admin", admin.idAdmin);
+                return RedirectToAction("Index", "QuanLyAdmin", admin.idAdmin);
             }
             else
-                return View("LoginGiangVien");
+                return View("LoginSinhVien");
         }
         #endregion
 
