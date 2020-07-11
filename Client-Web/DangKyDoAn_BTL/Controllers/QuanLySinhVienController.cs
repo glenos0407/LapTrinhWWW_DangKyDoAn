@@ -59,7 +59,7 @@ namespace DangKyDoAn_BTL.Controllers
                             "\"idDoAn\": " + "null" + "}" +
                             "\"DoAns\": " + "null" + "}";
             var content = new StringContent(contentString, Encoding.UTF8, "application/json");
-            var response = client.GetAsync("api/SinhVien/Add", content).Result;
+            var response = client.PostAsync("api/SinhVien/Add", content).Result;
             if (response.IsSuccessStatusCode)
             {
                 return await response.Content.ReadAsStringAsync();

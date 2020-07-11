@@ -10,3 +10,15 @@ C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200630_01\LapTrinhWWW_Dang
 C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200630_01\LapTrinhWWW_DangKyDoAn\Client-Web\Entities\obj\Debug\Entities.dll
 C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200630_01\LapTrinhWWW_DangKyDoAn\Client-Web\Entities\obj\Debug\Entities.pdb
 C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200630_01\LapTrinhWWW_DangKyDoAn\Client-Web\Entities\obj\Debug\Entities.csprojAssemblyReference.cache
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200710\LapTrinhWWW_DangKyDoAn\Client-Web\Entities\bin\Debug\Entities.dll.config
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200710\LapTrinhWWW_DangKyDoAn\Client-Web\Entities\bin\Debug\Entities.dll
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200710\LapTrinhWWW_DangKyDoAn\Client-Web\Entities\bin\Debug\Entities.pdb
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200710\LapTrinhWWW_DangKyDoAn\Client-Web\Entities\bin\Debug\EntityFramework.dll
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200710\LapTrinhWWW_DangKyDoAn\Client-Web\Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200710\LapTrinhWWW_DangKyDoAn\Client-Web\Entities\bin\Debug\EntityFramework.xml
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200710\LapTrinhWWW_DangKyDoAn\Client-Web\Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200710\LapTrinhWWW_DangKyDoAn\Client-Web\Entities\obj\Debug\Entities.csprojAssemblyReference.cache
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200710\LapTrinhWWW_DangKyDoAn\Client-Web\Entities\obj\Debug\Entities.csproj.CoreCompileInputs.cache
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200710\LapTrinhWWW_DangKyDoAn\Client-Web\Entities\obj\Debug\Entities.csproj.CopyComplete
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200710\LapTrinhWWW_DangKyDoAn\Client-Web\Entities\obj\Debug\Entities.dll
+C:\Users\PhatDepTraiCute\Downloads\Lập trình WWW\20200710\LapTrinhWWW_DangKyDoAn\Client-Web\Entities\obj\Debug\Entities.pdb
